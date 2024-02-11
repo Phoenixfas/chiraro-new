@@ -12,7 +12,7 @@ export default function Preloader({ children, }: { children: React.ReactNode }) 
     }, [])
 
     return (
-        isMounted ? <div className="w-full min-h-screen flex flex-col">
+        isMounted ? <div className="w-full flex flex-col">
             <Navbar />
             {children}
             <Footer />

@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa"
 
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-[#01baef] min-h-[100px] p-[20px_0_0] flex justify-center items-center flex-col mt-[200px]">
+    <footer className="relative w-full bg-[#01baef] p-[20px_0_0] flex justify-center items-center flex-col mt-[200px]">
         <div className="waves">
             <div className="absolute top-[-99px] left-0 w-full h-[100px] bg-[url('/images/wave.png')] bg-[length:1000px_100px] z-10 opacity-100 bottom-0 animate-animateWaves-4" id="wave1"></div>
             <div className="absolute top-[-99px] left-0 w-full h-[100px] bg-[url('/images/wave.png')] bg-[length:1000px_100px] z-9 opacity-50 bottom-[10px] animate-animateWaves-r-4" id="wave2"></div>
