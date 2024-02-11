@@ -1,0 +1,70 @@
+.logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999999999;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #080C1B;
+}
+
+#logoSvg{
+    width: 100px;
+    /* opacity: 0; */
+    /* animation: appearloop 5s ease-in-out; */
+    animation: appearloop 3s ease-in-out infinite 3.5s;
+}
+  
+@keyframes appearloop {
+    0% {
+      /* opacity: 1; */
+      scale: 1;
+    }
+    /* 90% {
+      opacity: 1;
+    } */
+    50%{
+      scale: 1.1;
+    }
+    100%{
+      /* opacity: 0; */
+      scale: 1;
+    }
+}
+
+.green, .red, .orange, .lightblue, .cyan, .pink, .grey, .purple, .yellow, .lightgreen, .brown, .blue{
+    stroke: #fff;
+    stroke-dashoffset: -1000;
+    stroke-dasharray: 1000;
+    animation: dash 2s ease-in-out forwards;
+}
+.red, .orange{
+    stroke: none;
+    fill: #fff;
+    fill-opacity: 0;
+    animation: filling 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+.lightgreen, .purple, .yellow, .brown{
+    animation: dash 2s ease-in-out forwards .5s;
+}
+.blue{
+    fill: #fff;
+    fill-opacity: 0;
+    animation: filling .5s ease-in-out forwards 3s, dash 2s ease-in-out forwards 1s;
+}
+  
+@keyframes filling {
+    to {
+      fill-opacity: 1;
+    }
+}
+  
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
