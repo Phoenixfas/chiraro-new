@@ -5,6 +5,7 @@ import { IoIosArrowRoundDown } from "react-icons/io";
 import ScrollOffers from "@/components/ScrollOffers";
 import OurServices from "@/components/OurServices";
 import SEOInfo from "@/components/SEOInfo";
+import RecentClients from "@/components/RecentClients";
 
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] })
@@ -22,6 +23,7 @@ export default function Home() {
       <Offers />
       <OurServices />
       <SEOInfo />
+      <RecentClients />
     </main>
   );
 }
