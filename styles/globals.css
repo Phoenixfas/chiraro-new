@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body::-webkit-scrollbar {
+  display: none;
+}
+  
 
 body {
   color: #fff;
@@ -13,3 +17,29 @@ body {
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
+/* if a check with id all getts checked change background of the neighbor with .all */
+
+#all:checked ~ .all,
+#website:checked ~ .web,
+#application:checked ~ .app,
+#graphics:checked ~ .graph
+{
+  background-color: #00adb5;
+}
+
+/* whenever an inactive is selected turn the rest bg to transparent */
+#all:checked ~ .web,
+#all:checked ~ .app,
+#all:checked ~ .graph,
+#website:checked ~ .all,
+#website:checked ~ .app,
+#website:checked ~ .graph,
+#application:checked ~ .all,
+#application:checked ~ .web,
+#application:checked ~ .graph,
+#graphics:checked ~ .all,
+#graphics:checked ~ .web,
+#graphics:checked ~ .app
+{
+  background-color: transparent;
+}
