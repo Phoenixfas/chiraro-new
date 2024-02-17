@@ -6,6 +6,7 @@ import ScrollOffers from "@/components/ScrollOffers";
 import OurServices from "@/components/OurServices";
 import SEOInfo from "@/components/SEOInfo";
 import RecentClients from "@/components/RecentClients";
+import Blog from "@/components/Blog";
 
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] })
@@ -24,6 +25,7 @@ export default function Home() {
       <OurServices />
       <SEOInfo />
       <RecentClients />
+      <Blog />
     </main>
   );
 }

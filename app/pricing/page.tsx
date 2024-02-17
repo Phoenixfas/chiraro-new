@@ -1,8 +1,11 @@
 import React from 'react'
+import WebPricing from './WebPricing'
 
 const page = () => {
   return (
-    <div>page</div>
+    <div className='w-full flex flex-col items-center'>
+      <WebPricing />
+    </div>
   )
 }
 
