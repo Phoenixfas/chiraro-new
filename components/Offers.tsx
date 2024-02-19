@@ -8,7 +8,7 @@ const Offers = () => {
           <div className='absolute top-[50%] left-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]'> </div>
           <div className='absolute top-[10%] rounded-full border-[4px] left-[-8%] w-[130px] h-[130px] border-[#5FE0F9] bg-[#2F404B] flex justify-center items-center'>
             <svg width="47" height="58" viewBox="0 0 47 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M23.5 55C23.5 55 44 44.6 44 29V10.8L23.5 3L3 10.8V29C3 44.6 23.5 55 23.5 55Z" stroke="#84F5FC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M23.5 55C23.5 55 44 44.6 44 29V10.8L23.5 3L3 10.8V29C3 44.6 23.5 55 23.5 55Z" stroke="#84F5FC" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
           <h1 className='text-[36px] font-semibold pb-1'>Secure</h1>
@@ -31,7 +31,7 @@ const Offers = () => {
           <div className='absolute top-[50%] left-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]'> </div>
           <div className='absolute top-[10%] rounded-full border-[4px] left-[-8%] w-[130px] h-[130px] border-[#5FE0F9] bg-[#2F404B] flex justify-center items-center'>
             <svg width="47" height="58" viewBox="0 0 47 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M23.5 55C23.5 55 44 44.6 44 29V10.8L23.5 3L3 10.8V29C3 44.6 23.5 55 23.5 55Z" stroke="#84F5FC" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M23.5 55C23.5 55 44 44.6 44 29V10.8L23.5 3L3 10.8V29C3 44.6 23.5 55 23.5 55Z" stroke="#84F5FC" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
           <h1 className='text-[36px] font-semibold pb-1'>Secure</h1>
