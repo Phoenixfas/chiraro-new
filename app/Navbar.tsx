@@ -35,7 +35,7 @@ export default function Navbar() {
     }, [])
     const currentPage = usePathname();
         
-    console.log(currentPage)
+    // console.log(currentPage)
     const checkCurrentPage = (page:String) => {
         // return true if the page is the current page
         if (currentPage === page) {
