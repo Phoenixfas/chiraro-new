@@ -17,7 +17,7 @@ export default function WebPricing() {
                 <div className={`px-8 py-2 text-2xl font-semibold rounded-full cursor-pointer duration-300 border-2 border-[#ffffff00] ${wType === "static" && 'border-[#43D0F7ff_!important] shadow-[0px_5px_10px_0px_#43D0F755]'}`} onClick={() => dispatch(changeWType("static"))}>Static Web Presence</div>
                 <div className={`px-8 py-2 text-2xl font-semibold rounded-full cursor-pointer duration-300 border-2 border-[#ffffff00] ${wType === "dynamic" && 'border-[#43D0F7ff_!important] shadow-[0px_5px_10px_0px_#43D0F755]'}`} onClick={() => dispatch(changeWType("dynamic"))}>Dynamic Web Application</div>
             </div>
-            <p className='w-full max-w-[800px] text-lg text-center mb-16'>Unlock the full potential of your business with our affordable pricing plans. Choose the perfect fit and let's grow together!</p>
+            <p className='w-full max-w-[800px] text-lg text-center mb-16'>Unlock the full potential of your business with our affordable pricing plans. Choose the perfect fit and let&apos;s grow together!</p>
             <WebCards />
         </div>
     )
