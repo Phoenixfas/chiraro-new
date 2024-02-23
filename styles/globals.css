@@ -6,7 +6,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-
 body {
   color: #fff;
   background-color: #222831;
@@ -14,43 +13,41 @@ body {
   height: 100%;
 }
 
-
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* if a check with id all getts checked change background of the neighbor with .all */
 
-#all:checked~.all,
-#website:checked~.web,
-#application:checked~.app,
-#graphics:checked~.graph {
+#all:checked ~ .all,
+#website:checked ~ .web,
+#application:checked ~ .app,
+#graphics:checked ~ .graph {
   background-color: #00adb5;
 }
 
 /* whenever an inactive is selected turn the rest bg to transparent */
-#all:checked~.web,
-#all:checked~.app,
-#all:checked~.graph,
-#website:checked~.all,
-#website:checked~.app,
-#website:checked~.graph,
-#application:checked~.all,
-#application:checked~.web,
-#application:checked~.graph,
-#graphics:checked~.all,
-#graphics:checked~.web,
-#graphics:checked~.app {
+#all:checked ~ .web,
+#all:checked ~ .app,
+#all:checked ~ .graph,
+#website:checked ~ .all,
+#website:checked ~ .app,
+#website:checked ~ .graph,
+#application:checked ~ .all,
+#application:checked ~ .web,
+#application:checked ~ .graph,
+#graphics:checked ~ .all,
+#graphics:checked ~ .web,
+#graphics:checked ~ .app {
   background-color: transparent;
 }
 
 .button-bg {
-  background: linear-gradient(99.9deg, #CCE7E9 -14.1%, #43D0F7 73.01%);
+  background: linear-gradient(99.9deg, #cce7e9 -14.1%, #43d0f7 73.01%);
   box-shadow: 0px 0px 18px 4px #43d0f770;
   border-radius: 1rem;
 }
 
 .one {
   z-index: 1;
-  perspective: 1000px;
   opacity: 1;
   background: #353535;
   animation: goingToOne 2s;
@@ -58,7 +55,6 @@ body {
 
 .two {
   @apply -translate-x-2 translate-y-5 -rotate-[15deg];
-  perspective: 1000px;
   opacity: 0.7;
   z-index: 0;
   background-color: #353535;
@@ -73,7 +69,6 @@ body {
   perspective: 1000px;
   background-color: #353535;
   animation: goingToThree 2s;
-
 }
 
 @keyframes goingToOne {
@@ -86,8 +81,8 @@ body {
   }
 
   40% {
+    opacity: 1;
     transform: rotate(0deg) translateX(0px);
-
   }
 
   100% {
@@ -107,17 +102,15 @@ body {
   }
 
   40% {
+    opacity: 0.7;
     transform: rotate(-15deg) translateX(-8px) translateY(20px);
-
   }
 
   100% {
     opacity: 0.7;
     z-index: 0;
-
+    transform: rotate(-15deg) translateX(-8px) translateY(20px);
     background-color: #353535;
-    background-color: #353535;
-    @apply -translate-x-2 translate-y-5 -rotate-[15deg];
   }
 }
 
@@ -128,9 +121,15 @@ body {
     opacity: 1;
     background: #353535;
   }
+  20% {
+    opacity: 0;
+  }
 
   40% {
     @apply translate-y-12 -rotate-[32deg];
+  }
+  60% {
+    opacity: 0.3;
   }
 
   100% {
