@@ -43,7 +43,6 @@ body {
 .button-bg {
   background: linear-gradient(99.9deg, #cce7e9 -14.1%, #43d0f7 73.01%);
   box-shadow: 0px 0px 18px 4px #43d0f770;
-  border-radius: 1rem;
 }
 
 .one {
@@ -152,4 +151,72 @@ body {
 .shadowSlider {
   box-shadow: 0px 0px 18px 4px #43d0f714;
   border-radius: 1rem;
+}
+
+.rect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  background: #2f404b;
+  filter: blur(2px);
+  border-radius: 12px;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0px 0px 18px 4px #5fe0f9;
+}
+
+.button {
+  z-index: 2;
+  padding: 15px 60px;
+  overflow: hidden;
+  position: relative;
+  background-color: linear-gradient(99.9deg, #cce7e9 -14.1%, #43d0f7 73.01%);
+  transition: all 0.5s;
+}
+.button span {
+  z-index: 2;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(99.9deg, #cce7e9 -14.1%, #43d0f7 73.01%);
+  z-index: -1;
+  border-radius: 99rem;
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
+.button:hover::before {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: all 0.5s;
+}
+.button:hover {
+  box-shadow: 0px 0px 18px 4px #5fe0f9;
+}
+.link {
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.link:hover {
+  color: #5fe0f9;
+}
+
+.linkSocial {
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.linkSocial:hover {
+  color: #5fe0f9;
+  box-shadow: 0px 0px 18px 4px #5fe0f9;
+  scale: 1.1;
 }

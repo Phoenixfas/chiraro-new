@@ -1,38 +1,91 @@
-import Link from "next/link"
-import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa"
+import Link from "next/link";
+import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FiHome } from "react-icons/fi";
+import { FaRegUser } from "react-icons/fa6";
+import { MdMiscellaneousServices } from "react-icons/md";
+import { MdPriceCheck } from "react-icons/md";
+import { FiPhone } from "react-icons/fi";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-[#01baef] p-[20px_0_0] flex justify-center items-center flex-col mt-[200px]">
-        <div className="waves">
-            <div className="absolute top-[-99px] left-0 w-full h-[100px] bg-[url('/images/wave.png')] bg-[length:1000px_100px] z-10 opacity-100 bottom-0 animate-animateWaves-4" id="wave1"></div>
-            <div className="absolute top-[-99px] left-0 w-full h-[100px] bg-[url('/images/wave.png')] bg-[length:1000px_100px] z-9 opacity-50 bottom-[10px] animate-animateWaves-r-4" id="wave2"></div>
-            <div className="absolute top-[-99px] left-0 w-full h-[100px] bg-[url('/images/wave.png')] bg-[length:1000px_100px] z-10 opacity-20 bottom-[15px] animate-animateWaves-3" id="wave3"></div>
-            <div className="absolute top-[-99px] left-0 w-full h-[100px] bg-[url('/images/wave.png')] bg-[length:1000px_100px] z-9 opacity-70 bottom-[20px] animate-animateWaves-r-3" id="wave4"></div>
+    <footer className="relative w-full p-[20px_0_0] flex justify-center items-center flex-col mt-[200px]">
+      <div className="absolute top-0 left-[32%] w-[2px] h-full bg-[rgba(238,238,238,0.1)] -z-[1]"></div>
+      <div className="absolute left-0 top-[50%] h-[2px] w-full bg-[rgba(238,238,238,0.1)] -z-[1]"></div>
+      <div className="py-[100px] w-full flex flex-col gap-14 justify-center items-center rounded-lg">
+        <div className="flex justify-center items-center gap-14">
+          <Link
+            href="/"
+            className="flex justify-center items-center gap-3 text-xl link"
+          >
+            {" "}
+            <FiHome />
+            Home{" "}
+          </Link>
+          <Link
+            href="/services"
+            className="flex justify-center items-center gap-3 text-xl link"
+          >
+            {" "}
+            <MdMiscellaneousServices />
+            Services{" "}
+          </Link>
+          <Link
+            href="/pricing"
+            className="flex justify-center items-center gap-3 text-xl link"
+          >
+            {" "}
+            <MdPriceCheck />
+            Pricing{" "}
+          </Link>
+
+          <Link
+            href="/about"
+            className="flex justify-center items-center gap-3 text-xl link"
+          >
+            {" "}
+            <FaRegUser />
+            About{" "}
+          </Link>
+          <Link
+            href="/contact"
+            className="flex justify-center items-center gap-3 text-xl link"
+          >
+            {" "}
+            <FiPhone />
+            Contact{" "}
+          </Link>
         </div>
-        <div className="flex gap-5 text-3xl">
-            <Link className="text-white hover:text-[#192655] duration-300" href="https://www.instagram.com/">
-                <FaInstagram />
-            </Link>
-            <Link className="text-white hover:text-[#192655] duration-300" href="https://www.facebook.com/">
-                <FaFacebook />
-            </Link>
-            <Link className="text-white hover:text-[#192655] duration-300" href="https://twitter.com/">
-                <FaTwitter />
-            </Link>
-            <Link className="text-white hover:text-[#192655] duration-300" href="https://www.linkedin.com/">
-                <FaLinkedin />
-            </Link>
+        <div className="flex justify-center items-center gap-7">
+          <Link
+            href={"instagram"}
+            className="flex justify-center items-center p-3 rounded-full text-[30px] bg-slate-700 linkSocial"
+          >
+            <FaInstagram />
+          </Link>
+          <Link
+            href={"facebook"}
+            className="flex justify-center items-center p-3 rounded-full text-[30px] bg-slate-700 linkSocial"
+          >
+            <FaFacebook />
+          </Link>
+          <Link
+            href={"twitter"}
+            className="flex justify-center items-center p-3 rounded-full text-[30px] bg-slate-700 linkSocial"
+          >
+            <FaTwitter />
+          </Link>
+          <Link
+            href={"linkedin"}
+            className="flex justify-center items-center p-3 rounded-full text-[30px] bg-slate-700 linkSocial"
+          >
+            <FaLinkedin />
+          </Link>
         </div>
-        <div className="flex flex-wrap justify-center gap-5 text-[1.3rem] p-[15px_20px] mt-[10px]">
-            <Link className="text-white hover:text-[#192655] duration-300" href="/">Services</Link>
-            <Link className="text-white hover:text-[#192655] duration-300" href="/store">Pricing</Link>
-            <Link className="text-white hover:text-[#192655] duration-300" href="/about">About</Link>
-            <Link className="text-white hover:text-[#192655] duration-300" href="/contact">Contact</Link>
+        <div className="text-[19px] text-slate-200 font-mono">
+          © All rights reserved{" "}
+          <span className="text-[#5fe0f9]">Chiraro Digital</span>{" "}
         </div>
-        <div className="w-full p-[15px_20px] text-[0.9rem] text-center ">
-            <p>&copy; 2023 Chiraro Digital Solutions. All Rights Reserved.</p>
-        </div>
+      </div>
     </footer>
-  )
+  );
 }

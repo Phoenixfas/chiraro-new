@@ -16,11 +16,12 @@ const Button = ({
         right ? "justify-start" : "justify-center px-6"
       }`}
     >
+      {/* text-[21px] font-bold px-[50px] py-5  */}
       <Link
         href={href}
-        className="text-[21px] font-bold px-[50px] py-5 button-bg rounded-[16px] relative"
+        className=" rounded-[100rem] relative btn-22 button button-bg overflow-hidden text-[25px] font-semibold"
       >
-        {name}
+        <span>{name}</span>
       </Link>
     </div>
   );
