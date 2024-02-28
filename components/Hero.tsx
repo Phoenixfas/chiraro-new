@@ -14,7 +14,7 @@ const Hero = () => {
       className={`w-[calc(100%-200px)] h-auto md:h-screen pt-[150px] flex flex-col mb-20 md:mb-0 ${poppins.className} mx-auto`}
     >
       <div className="flex justify-center items-center">
-        <div className="w-1/2 h-full flex justify-start items-start flex-col gap-7 pl-[100px]">
+        <div className="w-1/2 h-full flex justify-start items-start flex-col gap-7">
           <h1 className="text-[60px] font-[800] w-fit">
             Our <span className="text-[#43D0F7]">Services</span>
           </h1>

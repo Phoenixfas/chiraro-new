@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import ServicesGraph from "@/components/ServicesGraph";
+import ServicesSEO from "@/components/ServicesSEO";
 import ServicesWeb from "@/components/ServicesWeb";
 import { Poppins } from "next/font/google";
 import React from "react";
@@ -13,6 +14,7 @@ const page = () => {
       <Hero />
       <ServicesWeb />
       <ServicesGraph />
+      <ServicesSEO />
     </main>
   );
 };
