@@ -60,9 +60,7 @@ const Blog = () => {
         </div>
         <h1 className="text-[68px] font-[700] w-fit ">Blogs</h1>
         <div className="flex w-full justify-between items-stretch px-24 relative">
-          <div className="absolute bottom-[-5%] right-[-5%] w-[500px] h-[500px] bg-[#43D0F7] opacity-30 blur-[100px]">
-            {" "}
-          </div>
+          <div className="absolute bottom-[-5%] right-[-5%] w-[500px] h-[500px] bg-[#43D0F7] opacity-30 blur-[100px]"></div>
           <div className="w-[50%] overflow-hidden">
             <div
               className="w-full h-full items-center flex justify-start duration-[1s] "
