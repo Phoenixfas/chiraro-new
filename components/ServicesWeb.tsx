@@ -28,7 +28,6 @@ const ServicesWeb = () => {
         onClick={() => setActive(1)}
       >Dynamic Websites</div>
     </div>
-
     <div className="w-full overflow-hidden flex justify-start items-center my-5">
       <div className="w-full flex flex-nowrap justify-start duration-500"
         style={{

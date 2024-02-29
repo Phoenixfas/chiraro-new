@@ -1,15 +1,16 @@
 import React from "react";
 import Image from "next/image";
+import Button from "./Button";
 
 const ServicesGraph = () => {
   return (
-    <div className="flex flex-col pt-48 w-full px-[200px] relative justify-center items-center">
+    <section className="flex flex-col pt-48 w-full px-[200px] relative justify-center items-center">
       <h1 className="text-[60px] font-[700] w-fit mb-16">
-        Garphics <span className="text-[#43D0F7]">Design</span>
+        Graphics <span className="text-[#43D0F7]">Design</span>
       </h1>
       <div className="absolute top-[25%] left-0 w-[500px] h-[500px] bg-[#43D0F7] opacity-30 blur-[100px]"></div>
       <div className="absolute top-[45%] right-0 w-[500px] h-[500px] bg-[#43D0F7] opacity-30 blur-[100px]"></div>
-      <div className="flex justify center w-full">
+      <div className="flex justify center w-full mb-24">
 
         <div className="w-1/3 flex flex-col items-center justify-center px-5">
           <h1 className="text-[30px] font-bold">Logo Design</h1>
@@ -45,7 +46,9 @@ const ServicesGraph = () => {
           />
         </div>
       </div>
-    </div>
+      <Button right={false} href={"/contact"} name={"Request Service"} />
+
+    </section>
   );
 };
 
