@@ -55,7 +55,7 @@ export default function Hero3d() {
         const ambientLight = new THREE.AmbientLight(0x01BAEF, 0.1);
         // scene.add(ambientLight);
 
-        scene.background = new THREE.Color(0x080C1B);
+        scene.background = new THREE.Color(0x222831);
 
         // postprocessing
         const renderScene = new RenderPass(scene, camera);
@@ -66,7 +66,7 @@ export default function Hero3d() {
         bloomPass.threshold = .3;
         bloomPass.strength = .8;
         bloomPass.radius = 0.8;
-        
+
         composer.addPass(bloomPass);
 
 
@@ -153,10 +153,10 @@ export default function Hero3d() {
         return () => {
             // Remove the renderer and its canvas
             board.removeChild(renderer.domElement);
-      
+
             // Dispose of the renderer
             renderer.dispose();
-            
+
             window.removeEventListener('resize', resizer);
 
             hero.removeEventListener('mousemove', (e) => {
@@ -167,7 +167,7 @@ export default function Hero3d() {
 
     }, []);
 
-  return (
-    <div id='hero-board' className='w-full xl:h-full lg:h-[700px] md:h-[600px] h-[300px]'></div>
-  )
+    return (
+        <div id='hero-board' className='w-full xl:h-full lg:h-[700px] md:h-[600px] h-[300px]'></div>
+    )
 }

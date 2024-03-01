@@ -45,10 +45,10 @@ const OUrServices = () => {
                 <div className="w-full h-full absolute rounded-[20px] bg-[#FC9D9D] blur-[17px] z-[-1]"></div>
               </div>
               <h1 className="text-[26px] font-normal tracking-wide mt-2">
-                Web Application
+                Website Development
               </h1>
               <p className="text-[#797979] text-[18px] font-light ">
-                Platform independant business solutions for maximum availability
+                We build websites that convert visitors to customers and clients to partners.
               </p>
             </div>
             <div className="flex justify-start items-center flex-col min-h-[300px] gap-7 translate-y-8 w-[25%] text-center">
@@ -112,10 +112,10 @@ const OUrServices = () => {
                 <div className="w-full h-full absolute rounded-[20px] bg-[#E2F3FF] blur-[17px] z-[-1]"></div>
               </div>
               <h1 className="text-[26px] font-normal tracking-wide mt-2">
-                SEO
+                Social Media Marketing
               </h1>
               <p className="text-[#797979] text-[18px] font-light ">
-                Let the world find you on top of others
+                We&apos;ll help you reach your target audience and grow your business with social media marketing.
               </p>
             </div>
             <div className="flex justify-start items-center flex-col min-h-[300px] gap-7 w-[25%] text-center">
@@ -158,7 +158,7 @@ const OUrServices = () => {
                 Mobile Applications
               </h1>
               <p className="text-[#797979] text-[18px] font-light ">
-                The simplest but robust technology to accompany with you
+                Turn your ideas into reality with our mobile app development services.
               </p>
             </div>
           </div>
