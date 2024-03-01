@@ -8,11 +8,11 @@ import { FiPhone } from "react-icons/fi";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full p-[20px_0_0] flex justify-center items-center flex-col mt-[200px]">
+    <footer className="relative w-full p-[20px_0_0] flex justify-center items-center flex-col mt-[50px]">
       <div className="absolute top-0 left-[32%] w-[2px] h-full bg-[rgba(238,238,238,0.1)] -z-[1]"></div>
       <div className="absolute left-0 top-[50%] h-[2px] w-full bg-[rgba(238,238,238,0.1)] -z-[1]"></div>
-      <div className="py-[100px] w-full flex flex-col gap-14 justify-center items-center rounded-lg">
-        <div className="flex justify-center items-center gap-14">
+      <div className="py-[100px] px-5 w-full flex flex-col gap-14 justify-center items-center rounded-lg">
+        <div className="flex flex-wrap justify-center items-center gap-14">
           <Link
             href="/"
             className="flex justify-center items-center gap-3 text-xl link"
@@ -81,7 +81,7 @@ export default function Footer() {
             <FaLinkedin />
           </Link>
         </div>
-        <div className="text-[19px] text-slate-200 font-mono">
+        <div className="text-[19px] text-center text-slate-200 font-mono">
           © All rights reserved{" "}
           <span className="text-[#5fe0f9]">Chiraro Digital</span>{" "}
         </div>
