@@ -105,6 +105,56 @@ const packages = [
                     }
                 ]
             }
+        ],
+        packages: []
+    },
+    {
+        id: 2,
+        name: 'graphics',
+        categories: [],
+        packages: [
+            {
+                id: 1,
+                name: 'Starter Spark',
+                price: "8,000",
+                features: [
+                    '3 Logo Concepts, 2 Revisions',
+                    'Double-Sided Business Card Design',
+                    'Social Media Kit for 3 Platforms',
+                    '1 Promotional Material Choice',
+                    'Guidance by Design Consultant',
+                    'Delivered in 10 Business Days',
+                ],
+                main: false
+            },
+            {
+                id: 2,
+                name: 'Growth Accelerator',
+                price: "14,000",
+                features: [
+                    '5 Logo Concepts, Unlimited Revisions',
+                    'Full Stationery Design Set',
+                    'Social Media Designs for 5 Platforms',
+                    '3 Choices of Promotional Materials',
+                    'Custom Product Packaging Design',
+                    'Priority Completion in 7 Days',
+                ],
+                main: true
+            },
+            {
+                id: 3,
+                name: 'Brand Domination',
+                price: "25,000",
+                features: [
+                    'Unlimited Logo Concepts and Revisions',
+                    'Stationery & Merch Designs',
+                    '5-Page Web Design Mockup',
+                    'Comprehensive Social Media Kit',
+                    '5 Promos & Video Ad',
+                    '5-Day Delivery with Senior Team',
+                ],
+                main: false
+            }
         ]
     }
 ]
