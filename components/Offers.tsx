@@ -4,14 +4,14 @@ const Offers = () => {
   return (
     <section
       id="offers"
-      className="w-full items-center justify-center flex relative"
+      className="w-full items-center justify-center flex relative px-0 md:px-10"
     >
-      <div className="w-[calc(100%-200px)]  pt-[250px] pl-[80px] flex flex-col gap-[50px] mb-20 md:mb-0 items-start justify-start">
-        <div className="w-[90%] lg:w-[750px] h-fit pl-[100px] pr-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative">
+      <div className="w-[calc(100%-50px)] px-3 md:px-10 md:w-[calc(100%-200px)] pt-[100px] lg:pt-[250px] lg:pl-[80px] flex flex-col gap-[100px] md:gap-[50px] mb-20 md:mb-0 items-start justify-start">
+        <div className="w-full lg:w-[750px] h-fit pl-6 md:pl-[100px] pr-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative">
           <div className="absolute top-[50%] left-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]">
             {" "}
           </div>
-          <div className="absolute top-[10%] rounded-full border-[4px] left-[-8%] w-[130px] h-[130px] border-[#5FE0F9] bg-[#2F404B] flex justify-center items-center">
+          <div className="absolute -top-[25px] md:top-[10%] rounded-full border-[4px] left-[50%] -translate-x-1/2 md:translate-x-0 md:left-[-8%] w-[130px] p-5 h-[130px] border-[#5FE0F9] bg-[#2F404B] flex justify-center items-center">
             <svg
               width="47"
               height="58"
@@ -28,17 +28,22 @@ const Offers = () => {
               />
             </svg>
           </div>
-          <h1 className="text-[36px] font-semibold pb-1">Secure</h1>
-          <p className="text-[18px] font-light leading-[32px] tracking-wider pb-5">
-            Building a foundation of trust, our commitment to security goes
-            beyond mere protection it&apos;s about constructing robust digital
-            fortresses that safeguard your data and assets, ensuring a resilient
-            defense against the evolving landscape of cyber threats.
-          </p>
+          <div className="md:mt-0 mt-24 md:block flex  justify-center flex-col md:text-start text-center">
+            <h1 className="text-[36px] font-semibold pb-1">Secure</h1>
+            <p className="text-[18px] font-light leading-[32px] tracking-wider pb-5">
+              Building a foundation of trust, our commitment to security goes
+              beyond mere protection it&apos;s about constructing robust digital
+              fortresses that safeguard your data and assets, ensuring a resilient
+              defense against the evolving landscape of cyber threats.
+            </p>
+          </div>
+
         </div>
-        <div className="w-[90%] lg:w-[750px] h-fit mr-[100px] pl-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative self-end">
-          <div className="absolute top-[50%] right-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]"></div>
-          <div className="absolute top-[10%] rounded-full border-[4px] right-[-8%] w-[130px] h-[130px] border-[#5FE0F9] bg-[#2F404B] flex justify-center items-center">
+        <div className="w-full lg:w-[750px] h-fit pl-[40px] md:pr-[100px] pr-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative lg:self-end">
+          <div className="absolute hidden md:block top-[50%] right-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]">
+            {" "}
+          </div>
+          <div className="absolute -top-[25px] md:top-[10%] right-[50%] translate-x-1/2 md:translate-x-0 md:right-[-8%] w-[130px] p-5 h-[130px] rounded-full border-[4px] border-[#5FE0F9] bg-[#2F404B] flex justify-center items-center">
             <svg
               width="60"
               height="62"
@@ -52,7 +57,7 @@ const Offers = () => {
               />
             </svg>
           </div>
-          <div className="w-[85%]">
+          <div className="md:mt-0 mt-24 md:block flex  justify-center flex-col md:text-start text-center">
             <h1 className="text-[36px] font-semibold pb-1">Innovative</h1>
             <p className="text-[18px] font-light leading-[32px] tracking-wider pb-5">
               Dedicated to the relentless pursuit of innovation, we specialize
@@ -61,12 +66,13 @@ const Offers = () => {
               business
             </p>
           </div>
+
         </div>
-        <div className="w-[90%] lg:w-[750px] h-fit pl-[100px] pr-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative">
+        <div className="w-full lg:w-[750px] h-fit pl-6 md:pl-[100px] pr-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative">
           <div className="absolute top-[50%] left-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]">
             {" "}
           </div>
-          <div className="absolute top-[10%] rounded-full border-[4px] left-[-8%] w-[130px] h-[130px] border-[#5FE0F9] bg-[#2F404B] flex justify-center items-center">
+          <div className="absolute -top-[25px] md:top-[10%] rounded-full border-[4px] left-[50%] -translate-x-1/2 md:translate-x-0 md:left-[-8%] w-[130px] p-5 h-[130px] border-[#5FE0F9] bg-[#2F404B] flex justify-center items-center">
             <svg
               width="47"
               height="58"
@@ -83,13 +89,16 @@ const Offers = () => {
               />
             </svg>
           </div>
-          <h1 className="text-[36px] font-semibold pb-1">Secure</h1>
-          <p className="text-[18px] font-light leading-[32px] tracking-wider pb-5">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel qui
-            reprehenderit nemo iusto harum aliquam, animi asperiores natus,
-            excepturi inventore impedit veritatis quae fuga. Quod, fugit? Animi
-            eligendi doloremque nihil quis minima veniam deserunt dignissimos.
-          </p>
+          <div className="md:mt-0 mt-24 md:block flex  justify-center flex-col md:text-start text-center">
+            <h1 className="text-[36px] font-semibold pb-1">Secure</h1>
+            <p className="text-[18px] font-light leading-[32px] tracking-wider pb-5">
+              Building a foundation of trust, our commitment to security goes
+              beyond mere protection it&apos;s about constructing robust digital
+              fortresses that safeguard your data and assets, ensuring a resilient
+              defense against the evolving landscape of cyber threats.
+            </p>
+          </div>
+
         </div>
       </div>
       <div className="absolute bottom-[150px] left-0 w-full h-[1px] bg-[rgba(238,238,238,0.1)] -z-[1]"></div>
