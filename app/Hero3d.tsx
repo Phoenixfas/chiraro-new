@@ -63,11 +63,11 @@ export default function Hero3d() {
         composer.addPass(renderScene);
 
         const bloomPass = new UnrealBloomPass(new THREE.Vector2(board.clientWidth, board.clientHeight), 0.1, 0.1, 0.1);
-        bloomPass.threshold = .3;
-        bloomPass.strength = .8;
-        bloomPass.radius = 0.8;
+        bloomPass.threshold = .9;
+        bloomPass.strength = .4;
+        bloomPass.radius = 0.4;
 
-        composer.addPass(bloomPass);
+        // composer.addPass(bloomPass);
 
 
         // Load the model
@@ -119,8 +119,8 @@ export default function Hero3d() {
 
             // controls.update();
 
-            // renderer.render(scene, camera);
-            composer.render();
+            renderer.render(scene, camera);
+            // composer.render();
         };
 
         // Check if WebGL is supported

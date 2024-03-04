@@ -17,7 +17,7 @@ export default function Hero() {
         <Button right={true} href={"/services"} name={"Explore"} />
       </div>
       <div className="md:w-1/2 w-full flex justify-center items-center md:pr-10">
-        {/* <Hero3d /> */}
+        <Hero3d />
       </div>
     </div>
   );
