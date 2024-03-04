@@ -27,7 +27,7 @@ const ServicesGraph = () => {
           <h1 className="text-[25px] font-bold">Social Media Graphics</h1>
           <span className="text-[20px] font-[400] mb-10">Brand Identity</span>
           <Image
-            src="/images/graph2.svg"
+            src="/images/graph2.png"
             alt="Logo Designs"
             className="w-full"
             width={300}

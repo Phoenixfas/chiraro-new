@@ -12,40 +12,46 @@ export default function Footer() {
       <div className="absolute top-0 left-[32%] w-[2px] h-full bg-[rgba(238,238,238,0.1)] -z-[1]"></div>
       <div className="absolute left-0 top-[50%] h-[2px] w-full bg-[rgba(238,238,238,0.1)] -z-[1]"></div>
       <div className="py-[100px] px-5 w-full flex flex-col gap-14 justify-center items-center rounded-lg">
-        <div className="flex flex-wrap justify-center items-center gap-14">
-          <Link
-            href="/"
-            className="flex justify-center items-center gap-3 text-xl link"
-          >
-            {" "}
-            <FiHome />
-            Home{" "}
-          </Link>
-          <Link
-            href="/services"
-            className="flex justify-center items-center gap-3 text-xl link"
-          >
-            {" "}
-            <MdMiscellaneousServices />
-            Services{" "}
-          </Link>
-          <Link
-            href="/pricing"
-            className="flex justify-center items-center gap-3 text-xl link"
-          >
-            {" "}
-            <MdPriceCheck />
-            Pricing{" "}
-          </Link>
+        <div className="flex justify-center flex-col lg:flex-row items-center gap-14">
+          <div className="flex flex-wrap justify-center items-center gap-14">
 
-          <Link
-            href="/about"
-            className="flex justify-center items-center gap-3 text-xl link"
-          >
-            {" "}
-            <FaRegUser />
-            About{" "}
-          </Link>
+            <Link
+              href="/"
+              className="flex justify-center items-center gap-3 text-xl link"
+            >
+              {" "}
+              <FiHome />
+              Home{" "}
+            </Link>
+            <Link
+              href="/services"
+              className="flex justify-center items-center gap-3 text-xl link"
+            >
+              {" "}
+              <MdMiscellaneousServices />
+              Services{" "}
+            </Link>
+          </div>
+          <div className="flex justify-center items-center gap-14">
+
+            <Link
+              href="/pricing"
+              className="flex justify-center items-center gap-3 text-xl link"
+            >
+              {" "}
+              <MdPriceCheck />
+              Pricing{" "}
+            </Link>
+
+            <Link
+              href="/about"
+              className="flex justify-center items-center gap-3 text-xl link"
+            >
+              {" "}
+              <FaRegUser />
+              About{" "}
+            </Link>
+          </div>
           <Link
             href="/contact"
             className="flex justify-center items-center gap-3 text-xl link"
@@ -81,7 +87,7 @@ export default function Footer() {
             <FaLinkedin />
           </Link>
         </div>
-        <div className="text-[19px] text-center text-slate-200 font-mono">
+        <div className="text-[12px] sm:text-[19px] text-slate-200 font-mono">
           © All rights reserved{" "}
           <span className="text-[#5fe0f9]">Chiraro Digital</span>{" "}
         </div>

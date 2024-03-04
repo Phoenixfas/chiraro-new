@@ -1,17 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import { Poppins } from "next/font/google";
 import Button from "./Button";
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
+
 
 const Hero = () => {
   return (
     <section
       id="hero"
-      className={`w-[calc(100%-200px)] h-auto md:h-screen pt-[150px] flex flex-col mb-20 md:mb-0 ${poppins.className} mx-auto`}
+      className={`w-[calc(100%-200px)] h-auto md:h-screen pt-[150px] flex flex-col mb-20 md:mb-0 mx-auto`}
     >
       <div className="flex justify-center items-center">
         <div className="w-1/2 h-full flex justify-start items-start flex-col gap-7">
@@ -19,18 +15,16 @@ const Hero = () => {
             Our <span className="text-[#43D0F7]">Services</span>
           </h1>
           <p className="text-[#e5e5e5] leading-[200%] text-[20px] font-light">
-            At Chiraro, we are dedicated to providing top-notch digital
-            marketing solutions tailored to elevate your brand and drive
-            meaningful results. Explore our comprehensive range of services
-            below
+
+            Chiraro is your one-stop shop for exceptional digital marketing solutions. We specialize in crafting personalized strategies to elevate your brand and achieve tangible results.<br /><br /> Explore our extensive range of services below to discover how we can help you reach your marketing goals.
           </p>
         </div>
         <Image
           src={"/images/services.svg"}
           alt="Services"
-          className="w-1/2 h-full"
+          className="w-1/2 h-[400px]"
           width={500}
-          height={500}
+          height={400}
         />
       </div>
 

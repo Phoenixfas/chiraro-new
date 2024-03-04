@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from "react-icons/md";
 
 const RecentClients = () => {
   const [prevTab, setPrevTab] = useState("all");
@@ -22,41 +23,36 @@ const RecentClients = () => {
         </h1>
         <div className="flex justify-start items-center gap-10 text-[20px] font-medium mt-[20px] select-none">
           <p
-            className={`px-[15px] py-[7px] rounded-[24px] cursor-pointer duration-500 ${
-              tabs === "all" ? "bg-[#43D0F7]" : ""
-            }`}
+            className={`px-[15px] py-[7px] rounded-[24px] cursor-pointer duration-500 ${tabs === "all" ? "bg-[#43D0F7]" : ""
+              }`}
             onClick={() => tabsHandler("all")}
           >
             All
           </p>
           <p
-            className={`px-[15px] py-[7px] rounded-[24px] cursor-pointer duration-500 ${
-              tabs === "web" ? "bg-[#43D0F7]" : ""
-            }`}
+            className={`px-[15px] py-[7px] rounded-[24px] cursor-pointer duration-500 ${tabs === "web" ? "bg-[#43D0F7]" : ""
+              }`}
             onClick={() => tabsHandler("web")}
           >
             Website Development
           </p>
           <p
-            className={`px-[15px] py-[7px] rounded-[24px] cursor-pointer duration-500 ${
-              tabs === "gra" ? "bg-[#43D0F7]" : ""
-            }`}
+            className={`px-[15px] py-[7px] rounded-[24px] cursor-pointer duration-500 ${tabs === "gra" ? "bg-[#43D0F7]" : ""
+              }`}
             onClick={() => tabsHandler("gra")}
           >
             Graphics Design
           </p>
           <p
-            className={`px-[15px] py-[7px] rounded-[24px] cursor-pointer duration-500 ${
-              tabs === "app" ? "bg-[#43D0F7]" : ""
-            }`}
+            className={`px-[15px] py-[7px] rounded-[24px] cursor-pointer duration-500 ${tabs === "app" ? "bg-[#43D0F7]" : ""
+              }`}
             onClick={() => tabsHandler("app")}
           >
             Application Development
           </p>
           <p
-            className={`px-[15px] py-[7px] rounded-[24px] cursor-pointer duration-500 ${
-              tabs === "smm" ? "bg-[#43D0F7]" : ""
-            }`}
+            className={`px-[15px] py-[7px] rounded-[24px] cursor-pointer duration-500 ${tabs === "smm" ? "bg-[#43D0F7]" : ""
+              }`}
             onClick={() => tabsHandler("smm")}
           >
             Social Media Marketing
@@ -64,7 +60,7 @@ const RecentClients = () => {
         </div>
         <div className="overflow-hidden p-5">
           <div
-            className="absolute top-[60%] -right-3 w-16 flex justify-center items-center rounded-full h-16 bg-[#43d0f7aa] z-10 text-3xl translate-y-[50%] select-none"
+            className="absolute top-[60%] -right-3 w-16 flex justify-center items-center rounded-full h-16 bg-[#43d0f7d2] z-10 text-3xl translate-y-[50%] select-none cursor-pointer boxShadow"
             onClick={() => {
               if (translate <= 5 - 3) {
                 setTranslate(translate + 1);
@@ -74,10 +70,10 @@ const RecentClients = () => {
               console.log(translate);
             }}
           >
-            &gt;
+            <MdOutlineNavigateNext />
           </div>
           <div
-            className="absolute top-[60%] left-3 w-16 flex justify-center items-center rounded-full h-16 bg-[#43d0f7aa] z-10 text-3xl translate-y-[50%] select-none"
+            className="absolute top-[60%] left-3 w-16 flex justify-center items-center rounded-full h-16 bg-[#43d0f7d2] z-10 text-3xl translate-y-[50%] select-none cursor-pointer boxShadow"
             onClick={() => {
               if (translate > 0) {
                 setTranslate(translate - 1);
@@ -85,7 +81,7 @@ const RecentClients = () => {
               console.log(translate);
             }}
           >
-            &lt;
+            <MdOutlineNavigateBefore />
           </div>
           <div
             id="slider"

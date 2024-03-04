@@ -12,14 +12,13 @@ const Button = ({
 }) => {
   return (
     <div
-      className={`w-full my-[20px] flex ${
-        right ? "justify-start" : "justify-center px-6"
-      }`}
+      className={`w-full my-[20px] flex ${right ? "md:justify-start" : "md:justify-center px-6"
+        } justify-center`}
     >
       {/* text-[21px] font-bold px-[50px] py-5  */}
       <Link
         href={href}
-        className=" rounded-[100rem] relative btn-22 button button-bg overflow-hidden text-[25px] font-semibold"
+        className=" rounded-[100rem] relative btn-22 button button-bg overflow-hidden text-[18px] md:text-[25px] font-semibold flex justify-center"
       >
         <span>{name}</span>
       </Link>

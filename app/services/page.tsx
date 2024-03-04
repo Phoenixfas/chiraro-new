@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 const page = () => {
   return (
-    <main className={`${poppins.className}`}>
+    <main>
       <Hero />
       <ServicesWeb />
       <ServicesGraph />

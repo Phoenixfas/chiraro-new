@@ -8,14 +8,14 @@ const WhyChiraro = () => {
                 Why Chiraro <span className="text-[#43D0F7]">Digital</span>
             </h1>
 
-            <div className="w-full relative flex flex-col gap-48 px-[200px]">
+            <div className="w-full relative flex flex-col gap-48">
                 <Image src='/images/why.svg' alt='Why Chiraro' width={1000} height={500} className='
                     absolute top-0 left-0 w-full h-full object-fit z-10
                 '/>
-                <div className="absolute top-[25%] left-[-100px] w-[500px] h-[500px] bg-[#43D0F7] opacity-30 blur-[100px]"></div>
-                <div className="absolute top-[25%] right-[-100px] w-[500px] h-[500px] bg-[#43D0F7] opacity-30 blur-[100px]"></div>
-                <div className='flex justify-between items-center'>
-                    <div className='flex flex-col items-center justify-center w-[30%] text-center'>
+                <div className="absolute top-[25%] left-0 w-[500px] h-[500px] bg-[#43D0F7] opacity-30 blur-[100px]"></div>
+                <div className="absolute top-[25%] right-0 w-[500px] h-[500px] bg-[#43D0F7] opacity-30 blur-[100px]"></div>
+                <div className='flex justify-between items-center px-[200px]'>
+                    <div className='flex flex-col items-center justify-center w-[30%] text-center '>
                         <h1 className='text-[24px] font-semibold text-[#43D0F7] mb-5'>Expertise</h1>
                         <p className='text-[20px] font-[400] leading-[200%]'>Our team comprises experienced professionals with a deep understanding of digital marketing trends and techniques.</p>
                     </div>
@@ -28,7 +28,7 @@ const WhyChiraro = () => {
                         <p className='text-[20px] font-[400] leading-[200%]'>We tailor our solutions to meet your unique business goals and objectives.</p>
                     </div>
                 </div>
-                <div className='flex justify-center gap-32 items-center translate-y-24'>
+                <div className='flex justify-center gap-32 items-center translate-y-24 px-[200px]'>
                     <div className='flex flex-col items-center justify-center w-[30%] text-center'>
                         <h1 className='text-[24px] font-semibold text-[#43D0F7] mb-5'>Continuous <br />
                             Improvement</h1>

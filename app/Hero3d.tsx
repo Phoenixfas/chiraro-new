@@ -168,6 +168,6 @@ export default function Hero3d() {
     }, []);
 
     return (
-        <div id='hero-board' className='w-full xl:h-full lg:h-[700px] md:h-[600px] h-[300px]'></div>
+        <div id='hero-board' className='w-full xl:h-full lg:h-[700px] md:h-[600px] h-[400px]'></div>
     )
 }
