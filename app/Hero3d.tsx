@@ -55,7 +55,7 @@ export default function Hero3d() {
         const ambientLight = new THREE.AmbientLight(0x01BAEF, 0.1);
         // scene.add(ambientLight);
 
-        scene.background = new THREE.Color(0x222831);
+        // scene.background = new THREE.Color(0x222831);
 
         // postprocessing
         const renderScene = new RenderPass(scene, camera);
@@ -168,6 +168,6 @@ export default function Hero3d() {
     }, []);
 
     return (
-        <div id='hero-board' className='w-full xl:h-full lg:h-[700px] md:h-[600px] h-[400px]'></div>
+        <div id='hero-board' className='relative w-full xl:h-full lg:h-[700px] md:h-[600px] h-[400px]'></div>
     )
 }
