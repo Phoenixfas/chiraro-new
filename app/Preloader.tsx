@@ -9,7 +9,7 @@ export default function Preloader({ children, }: { children: React.ReactNode }) 
 
     useEffect(() => {
         setIsMounted(true)
-    }, [])
+    }, [isMounted])
 
     return (
         isMounted ? <div className="w-full flex flex-col">
