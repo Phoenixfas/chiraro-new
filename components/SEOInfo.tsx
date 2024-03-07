@@ -4,17 +4,17 @@ import Button from "./Button";
 
 const SEOInfo = () => {
   return (
-    <section className="w-full h-full items-center justify-center flex relative py-[150px]">
-      <div className="absolute top-0 left-[35%] w-[2px] h-full bg-[rgba(238,238,238,0.1)] -z-[1]"></div>
-      <div className="absolute top-[100%] left-0 w-full h-[2px] bg-[rgba(238,238,238,0.1)] -z-[1]"></div>
-      <div className="pl-[20px] flex justify-between items-end w-[calc(100%-200px)]">
-        <div className="flex flex-col items-center w-[45%]">
+    <section className="w-full h-full items-center justify-center flex relative py-[50px] lg:py-[150px]">
+      <div className="hidden lg:block absolute top-0 left-[35%] w-[2px] h-full bg-[rgba(238,238,238,0.1)] -z-[1]"></div>
+      <div className="hidden lg:block absolute top-[100%] left-0 w-full h-[2px] bg-[rgba(238,238,238,0.1)] -z-[1]"></div>
+      <div className="pl-[20px] flex lg:flex-row flex-col justify-between items-end w-[95%] sm:w-[calc(100%-200px)]">
+        <div className="flex flex-col items-center w-full lg:w-[45%]">
           <h1 className="text-[68px] font-[700] leading-[85px]">
             <span className="text-[#43D0F7]">GROW</span> TRAFFIC &<br />
             INCREASE <br />
             <span className="text-[#43D0F7]">REVENUE</span>
           </h1>
-          <div className="translate-x-[40%] scale-105 translate-y-[-22%] relative">
+          <div className="translate-x-0 sm:translate-x-[40%] scale-105 translate-y-[-10%] relative">
             <svg
               width="272"
               height="365"
@@ -133,7 +133,7 @@ const SEOInfo = () => {
             </svg>
           </div>
         </div>
-        <div className="w-[40%] flex pb-20 items-end gap-5 flex-col text-[18] ">
+        <div className="w-full lg:w-[45%] flex pb-20 items-center lg:text-start text-center lg:items-start gap-5 flex-col text-[18]">
           <h1 className="text-[32px] font-medium">
             Appear On the Front Page of Google!
           </h1>
@@ -143,7 +143,7 @@ const SEOInfo = () => {
             rankings — even when it comes to highly competitive keywords.
           </p>
           <div className="mt-10 w-full flex justify-start">
-            <Button right={false} href={"/services"} name={"See More"} />
+            <Button right={true} href={"/services"} name={"See More"} />
           </div>
         </div>
       </div>

@@ -42,7 +42,7 @@ const ServicesWeb = () => {
         <div className="min-w-full flex justify-center items-center gap-10 flex-col">
           <p className="text-[#e5e5e5] leading-[200%] text-[22px] font-light text-center">
             A dynamic website brings businesses to life online, engaging visitors with interactive features like forms, galleries, and real-time updates. It fosters stronger customer relationships, drives traffic through personalized content, and adapts to evolving needs. This dynamic approach maximizes engagement, conversion rates, and overall business success.</p>
-          <Image src={"/images/bluenile.png"} alt="Static Websites" className="w-[70%] rounded-2xl" width={1000} height={1000} />
+          <Image src={"/images/sawla.png"} alt="Static Websites" className="w-[70%] rounded-2xl" width={1000} height={1000} />
           <Button right={false} href={"/contact"} name={"Request Service"} />
         </div>
       </div>

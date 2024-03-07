@@ -4,14 +4,14 @@ import Button from "./Button";
 
 const OUrServices = () => {
   return (
-    <section className="w-full h-full items-center justify-center flex relative py-[150px]">
-      <div className="w-[calc(100%-200px)]   flex flex-col gap-[50px] mb-20 md:mb-0 items-center justify-center relative ">
-        <h1 className="text-[68px] font-[700] w-fit">
-          Our <span className="text-[#43D0F7]">Services</span>
+    <section className="w-full h-full items-center justify-center flex relative py-[70px] md:py-[150px]">
+      <div className="w-[calc(100%-200px)] flex flex-col gap-[50px] mb-20 md:mb-0 items-center justify-center relative ">
+        <h1 className="text-[45px] lg:text-[68px] font-[700] w-fit text-center">
+          Our <span className="text-[#43D0F7] block lg:inline">Services</span>
         </h1>
-        <div className="mt-[140px] w-full justify-center items-center flex-col">
-          <div className="w-full h-52 flex justify-center gap-[60px] items-center">
-            <div className="flex justify-start items-center flex-col gap-7 min-h-[300px] w-[25%] text-center">
+        <div className=" w-full justify-center items-center flex-col ">
+          <div className="w-full flex justify-center md:flex-row flex-col gap-[50px] items-center my-[50px]">
+            <div className="flex justify-start items-center flex-col gap-7 min-w-[30%] text-center">
               <div className="w-[100px] h-[100px] rounded-[20px] bg-[rgba(255,237,237,1)] relative flex items-center justify-center">
                 <svg
                   width="53"
@@ -51,7 +51,7 @@ const OUrServices = () => {
                 We build websites that convert visitors to customers and clients to partners.
               </p>
             </div>
-            <div className="flex justify-start items-center flex-col min-h-[300px] gap-7 translate-y-8 w-[25%] text-center">
+            <div className="flex justify-start items-center flex-col gap-7 translate-y-0 md:translate-y-8 min-w-[30%] text-center">
               <div className="w-[100px] h-[100px] rounded-[20px] bg-[#E2F3FF] relative flex items-center justify-center">
                 <svg
                   width="46"
@@ -118,7 +118,7 @@ const OUrServices = () => {
                 We&apos;ll help you reach your target audience and grow your business with social media marketing.
               </p>
             </div>
-            <div className="flex justify-start items-center flex-col min-h-[300px] gap-7 w-[25%] text-center">
+            <div className="flex justify-start items-center flex-col gap-7 min-w-[30%] text-center">
               <div className="w-[100px] h-[100px] rounded-[20px] bg-[#F1E8FF] relative flex items-center justify-center">
                 <svg
                   width="53"
@@ -155,14 +155,14 @@ const OUrServices = () => {
                 <div className="w-full h-full absolute rounded-[20px] bg-[#7E33FA] blur-[17px] z-[-1]"></div>
               </div>
               <h1 className="text-[26px] font-normal tracking-wide mt-2">
-                Mobile Applications
+                Mobile Development
               </h1>
               <p className="text-[#797979] text-[18px] font-light ">
                 Turn your ideas into reality with our mobile app development services.
               </p>
             </div>
           </div>
-          <div className="w-full mt-36">
+          <div className="w-full mt-[50px] md:mt-[100px]">
             <Button right={false} href={"/services"} name={"More"} />
           </div>
           <div className="absolute top-[100%] right-[-1%] w-[400px] h-[400px] bg-[#43D0F7] opacity-30 blur-[150px] z-[-1]"></div>

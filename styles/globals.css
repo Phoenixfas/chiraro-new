@@ -310,3 +310,35 @@ body {
   opacity: 0;
   transform: translateY(-50%) translateX(-50%);
 }
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.clients {}
+
+.clients:before,
+.clients:after {
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.clients:before {
+  left: 0;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(34, 40, 49, 1) 100%);
+}
+
+.clients:after {
+  right: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(34, 40, 49, 1) 100%);
+}
