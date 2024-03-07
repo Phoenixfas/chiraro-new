@@ -4,10 +4,10 @@ const Offers = () => {
   return (
     <section
       id="offers"
-      className="w-full items-center justify-center flex relative px-0 md:px-10"
+      className="w-full items-center justify-center flex relative"
     >
-      <div className="w-[calc(100%-50px)] px-3 md:px-10 md:w-[calc(100%-200px)] pt-[100px] lg:pt-[250px] lg:pl-[80px] flex flex-col gap-[100px] md:gap-[50px] mb-20 md:mb-0 items-start justify-start">
-        <div className="w-full lg:w-[750px] h-fit pl-6 md:pl-[100px] pr-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative">
+      <div className="px-7 sm:px-[100px] lg:px-[200px] w-full md:px-10 pt-10 lg:pt-24 flex flex-col gap-[100px] md:gap-[50px] mb-20 md:mb-0 items-center lg:items-start justify-start">
+        <div className="w-full md:w-[80%] lg:w-[700px] h-fit pl-6 md:pl-[100px] pr-6 md:pr-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative">
           <div className="absolute top-[50%] left-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]">
             {" "}
           </div>
@@ -39,8 +39,8 @@ const Offers = () => {
           </div>
 
         </div>
-        <div className="w-full lg:w-[750px] h-fit pl-[40px] md:pr-[100px] pr-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative lg:self-end">
-          <div className="absolute hidden md:block top-[50%] right-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]">
+        <div className="w-full md:w-[80%] lg:w-[700px] h-fit pl-6 md:pl-[40px] md:pr-[100px] pr-6 py-5 rounded-xl bg-[rgba(47,64,75,1)] relative lg:self-end">
+          <div className="absolute hidden md:block top-[50%] right-0 lg:right-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]">
             {" "}
           </div>
           <div className="absolute -top-[25px] md:top-[10%] right-[50%] translate-x-1/2 md:translate-x-0 md:right-[-8%] w-[130px] p-5 h-[130px] rounded-full border-[4px] border-[#5FE0F9] bg-[#2F404B] flex justify-center items-center">
@@ -68,7 +68,7 @@ const Offers = () => {
           </div>
 
         </div>
-        <div className="w-full lg:w-[750px] h-fit pl-6 md:pl-[100px] pr-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative">
+        <div className="w-full md:w-[80%] lg:w-[700px] h-fit pl-6 md:pl-[100px] pr-6 md:pr-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative">
           <div className="absolute top-[50%] left-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]">
             {" "}
           </div>

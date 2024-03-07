@@ -3,10 +3,10 @@ import { IoIosArrowRoundDown } from 'react-icons/io'
 
 const ScrollOffers = () => {
   const handleScroll = () => {
-    const offsetTop = document.getElementById('offers')?.offsetTop
+    const offsetTop = document.getElementById('services')?.offsetTop
     if (offsetTop) {
       window.scrollTo({
-        top: offsetTop + 60,
+        top: offsetTop + 100,
         behavior: 'smooth'
       })
     }

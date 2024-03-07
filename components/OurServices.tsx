@@ -4,13 +4,18 @@ import Button from "./Button";
 
 const OUrServices = () => {
   return (
-    <section className="w-full h-full items-center justify-center flex relative py-[70px] md:py-[150px]">
-      <div className="w-[calc(100%-200px)] flex flex-col gap-[50px] mb-20 md:mb-0 items-center justify-center relative ">
-        <h1 className="text-[45px] lg:text-[68px] font-[700] w-fit text-center">
-          Our <span className="text-[#43D0F7] block lg:inline">Services</span>
+    <section id="services" className="w-full h-full items-center justify-center flex relative pt-10 lg:pt-24">
+      <div className="hidden md:block absolute bottom-[60px] left-0 w-full h-[1px] bg-[rgba(238,238,238,0.1)] z-[1]"></div>
+      <div className="px-7 sm:px-[50px] lg:px-[200px] w-full flex flex-col gap-5 mb-20 md:mb-0 items-center justify-center relative ">
+        <div className="absolute top-[50%] left-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]">
+          {" "}
+        </div>
+
+        <h1 className="text-[40px] sm:text-[45px] px-4 lg:text-[60px] font-[700] text-center relative w-full">
+          Our <span className="text-[#43D0F7]">Services</span>
         </h1>
         <div className=" w-full justify-center items-center flex-col ">
-          <div className="w-full flex justify-center md:flex-row flex-col gap-[50px] items-center my-[50px]">
+          <div className="w-full flex justify-center md:flex-row flex-col gap-[50px] items-center my-4 md:my-[50px]">
             <div className="flex justify-start items-center flex-col gap-7 min-w-[30%] text-center">
               <div className="w-[100px] h-[100px] rounded-[20px] bg-[rgba(255,237,237,1)] relative flex items-center justify-center">
                 <svg

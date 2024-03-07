@@ -192,7 +192,6 @@ body {
 
 .button {
   z-index: 2;
-  padding: 15px 60px;
   overflow: hidden;
   position: relative;
   background-color: linear-gradient(99.9deg, #cce7e9 -14.1%, #43d0f7 73.01%);

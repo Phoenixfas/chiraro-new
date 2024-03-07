@@ -36,11 +36,11 @@ const RecentClients = () => {
 
   return (
     <section className="w-full h-full items-center justify-center flex relative pt-0 lg:pt-[150px]">
-      <div className="w-[calc(100%-200px)] flex flex-col gap-[50px] mb-20 md:mb-0 items-center justify-center relative ">
-        <h1 className="font-[700] w-fit text-center text-[45px] lg:text-[68px]">
+      <div className="px-3 sm:px-[50px] lg:px-[200px] w-full flex flex-col items-center justify-center relative ">
+        <h1 className="font-[700] w-fit text-center text-[40px] sm:text-[45px] px-6 lg:text-[60px] mb-10">
           Our Recent<span className="text-[#43D0F7] block sm:inline"> Clients</span>
         </h1>
-        <div className="hidden md:flex justify-start items-center gap-2 lg:gap-5 text-[15px] lg:text-[20px] font-medium mt-[20px] select-none">
+        <div className="hidden md:flex justify-start items-center gap-2 lg:gap-5 text-[15px] lg:text-[20px] font-medium  select-none">
           <p
             className={`lg:px-[12px] lg:py-[6px] px-[6px] py-[3px] rounded-[24px] cursor-pointer duration-500 ${tabs === "all" ? "bg-[#43D0F7]" : ""
               }`}
@@ -77,7 +77,7 @@ const RecentClients = () => {
             Social Media Marketing
           </p>
         </div>
-        <div className="overflow-hidden clients relative">
+        <div className="overflow-hidden clients relative w-full">
           <div
             className="absolute top-[50%] right-0 w-16 flex justify-center items-center rounded-full h-16 bg-[#43d0f7d2] z-10 text-3xl -translate-y-[50%] select-none cursor-pointer"
             onClick={() => {
@@ -106,12 +106,12 @@ const RecentClients = () => {
             id="slider"
             className={`w-full flex justify-between gap-10 px-6 my-2 flex-nowrap duration-500 relative`}
             style={{
-              transform: `translateX(calc((${(sm || md) ? sm ? "30%" : "50%" : "100%"} + 35px) * ${translate}*-1))`,
+              transform: `translateX(calc((${(sm || md) ? sm ? "30%" : "50%" : "100%"} ) * ${translate}*-1))`,
             }}
           >
             <Link
               href={"https://www.sawlatours.com/"}
-              className="min-w-[90%] lg:min-w-[50%] xl:min-w-[30%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>div]:hover:translate-y-0 overflow-hidden"
+              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[30%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>div]:hover:translate-y-0 overflow-hidden"
             >
               <Image
                 alt="Sawla Tours"
@@ -128,7 +128,7 @@ const RecentClients = () => {
             </Link>
             <Link
               href={"https://www.bluenileexpeditions.com/"}
-              className="min-w-[90%] lg:min-w-[50%] xl:min-w-[30%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
+              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[30%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
             >
               <Image
                 alt="Blue Nile Expedition"
@@ -145,7 +145,7 @@ const RecentClients = () => {
             </Link>
             <Link
               href={"https://www.mettita.com/"}
-              className="min-w-[90%] lg:min-w-[50%] xl:min-w-[30%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
+              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[30%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
             >
               <Image
                 alt="Metti Legal Services"
@@ -162,25 +162,7 @@ const RecentClients = () => {
             </Link>
             <Link
               href={"https://www.bluenileexpeditions.com/"}
-              className="min-w-[90%] lg:min-w-[50%] xl:min-w-[30%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
-            >
-              <Image
-                alt="Sawla Tours"
-                width={800}
-                height={800}
-                src={"/images/sawla.png"}
-                className="object-cover h-full w-full rounded-xl"
-              />
-              <div className="w-full h-full absolute rounded-[20px] bg-[#43d0f7aa] blur-[17px] z-[-1] top-0 left-0"></div>
-
-              <div className="name absolute bottom-0 left-0 w-full h-[60px] bg-[#43d0f7aa] rounded-b-2xl flex items-center justify-center duration-500 translate-y-16">
-                <p className="text-[25px] font-medium">Metti Legal Services</p>
-              </div>
-            </Link>
-
-            <Link
-              href={"https://www.bluenileexpeditions.com/"}
-              className="min-w-[90%] lg:min-w-[50%] xl:min-w-[30%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
+              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[30%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
             >
               <Image
                 alt="Sawla Tours"

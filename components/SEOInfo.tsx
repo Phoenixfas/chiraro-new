@@ -4,12 +4,12 @@ import Button from "./Button";
 
 const SEOInfo = () => {
   return (
-    <section className="w-full h-full items-center justify-center flex relative py-[50px] lg:py-[150px]">
+    <section className="w-full h-full items-center justify-center flex relative pt-10 lg:pt-24">
       <div className="hidden lg:block absolute top-0 left-[35%] w-[2px] h-full bg-[rgba(238,238,238,0.1)] -z-[1]"></div>
       <div className="hidden lg:block absolute top-[100%] left-0 w-full h-[2px] bg-[rgba(238,238,238,0.1)] -z-[1]"></div>
       <div className="pl-[20px] flex lg:flex-row flex-col justify-between items-end w-[95%] sm:w-[calc(100%-200px)]">
         <div className="flex flex-col items-center w-full lg:w-[45%]">
-          <h1 className="text-[68px] font-[700] leading-[85px]">
+          <h1 className="text-[68px] font-[700] leading-[85px] ">
             <span className="text-[#43D0F7]">GROW</span> TRAFFIC &<br />
             INCREASE <br />
             <span className="text-[#43D0F7]">REVENUE</span>

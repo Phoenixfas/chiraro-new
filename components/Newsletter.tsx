@@ -7,8 +7,8 @@ const Newsletter = () => {
       id="offers"
       className="w-full items-center justify-center flex relative"
     >
-      <div className="w-[calc(100%-100px)] lg:w-[calc(100%-200px)] pt-[100px] lg:pt-[250px] pl-0 lg:pl-[80px] flex mb-20 md:mb-0 items-center justify-center">
-        <div className="w-[100%] px-0 sm:px-12 flex flex-col md:flex-row justify-center items-center rounded-lg relative py-10">
+      <div className="px-5 sm:px-[50px] lg:px-[200px] pt-[100px] lg:pt-[250px] pl-5 lg:pl-[80px] flex items-center justify-center">
+        <div className="w-full px-0 sm:px-12 flex flex-col md:flex-row justify-center items-center rounded-lg relative py-10">
           <div className="rect"></div>
           <div className="w-full md:w-1/2 p-8 flex flex-col gap-3">
             <div>

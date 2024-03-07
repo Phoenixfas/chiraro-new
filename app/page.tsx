@@ -7,6 +7,7 @@ import SEOInfo from "@/components/SEOInfo";
 import RecentClients from "@/components/RecentClients";
 import Blog from "@/components/Blog";
 import Newsletter from "@/components/Newsletter";
+import WhyChiraro from "@/components/WhyChiraro";
 export default function Home() {
   return (
     <main
@@ -22,6 +23,8 @@ export default function Home() {
       <Offers />
       <SEOInfo />
       <RecentClients />
+      <WhyChiraro />
+
       {/* <Blog /> */}
       <Newsletter />
     </main>
