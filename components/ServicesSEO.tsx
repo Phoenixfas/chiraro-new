@@ -5,7 +5,7 @@ const ServicesSEO = () => {
     return (
         <section className='flex flex-col pt-16 lg:pt-24 w-full px-7 sm:px-[50px] lg:px-[200px] relative justify-center items-center'>
 
-            <h1 className="text-[40px] sm:text-[45px] px-4 sm:text-[60px] font-[700] w-fit mb-10 text-center">
+            <h1 className="text-[40px] sm:text-[45px] px-4 lg:text-[60px] font-[700] w-fit mb-10 text-center">
                 Search Engine <span className="text-[#43d0f7]">Optimization</span>
             </h1>
             <p className="text-[#e5e5e5] leading-[200%] text-[22px] font-light text-center">Increase your online visibility and drive organic traffic to your website with our tailored SEO strategies. <br /> At Chiraro, we implement proven techniques to optimize your website for search engines and improve your rankings, ultimately boosting your online presence and attracting more potential customers.</p>

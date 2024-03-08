@@ -15,12 +15,12 @@ const config: Config = {
       },
     },
     fontFamily: {
-      'poppins': ['Poppins', 'sans-serif']
-    }
+      poppins: ["Poppins", "sans-serif"],
+    },
   },
   plugins: [
     // ...
-    require('tailwind-scrollbar'),
+    require("tailwind-scrollbar"),
   ],
 };
 export default config;

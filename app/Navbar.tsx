@@ -47,14 +47,12 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`w-full ${
-          menuOpen ? "hidden" : "flex"
-        } flex-col items-center relative z-[999999999]`}
+        className={`w-full ${menuOpen ? "hidden" : "flex"
+          } flex-col items-center relative z-[999999999]`}
       >
         <div
-          className={`w-[95%] duration-300 fixed ${
-            scrollingUp ? "top-10 py-3" : "top-0 py-10"
-          } md:bg-transparent bg-[rgba(255,255,255,.05)] md:backdrop-blur-none backdrop-blur-md flex items-center justify-between sm:px-8 px-3 py-3`}
+          className={`w-[95%] duration-300 fixed ${scrollingUp ? "top-10 py-3" : "top-0 py-10"
+            } md:bg-transparent bg-[rgba(255,255,255,.05)] md:backdrop-blur-none backdrop-blur-md flex items-center justify-between sm:px-8 px-3 py-3`}
         >
           <Link
             href={"/"}
@@ -75,33 +73,29 @@ export default function Navbar() {
           >
             <Link
               href={"/services"}
-              className={`${
-                checkCurrentPage("/services") ? "text-[#57D4F5]" : ""
-              } link`}
+              className={`${checkCurrentPage("/services") ? "text-[#57D4F5]" : ""
+                } link`}
             >
               Services
             </Link>
             <Link
               href={"/pricing"}
-              className={`${
-                checkCurrentPage("/pricing") ? "text-[#57D4F5]" : ""
-              } link`}
+              className={`${checkCurrentPage("/pricing") ? "text-[#57D4F5]" : ""
+                } link`}
             >
               Pricing
             </Link>
             <Link
               href={"/about"}
-              className={`${
-                checkCurrentPage("/about") ? "text-[#57D4F5]" : ""
-              } link`}
+              className={`${checkCurrentPage("/about") ? "text-[#57D4F5]" : ""
+                } link`}
             >
               About
             </Link>
             <Link
               href={"/contact"}
-              className={`${
-                checkCurrentPage("/contact") ? "text-[#57D4F5]" : ""
-              } link`}
+              className={`${checkCurrentPage("/contact") ? "text-[#57D4F5]" : ""
+                } link`}
             >
               Contact
             </Link>
@@ -116,9 +110,8 @@ export default function Navbar() {
         </div>
       </div>
       <div
-        className={`fixed top-5 right-0 z-[9999999999] w-3/4 flex flex-col gap-5 pb-10 rounded-l-2xl bg-[rgba(255,255,255,.05)] backdrop-blur-md border-[2px] border-r-0 border-[#192655] duration-300 ${
-          menuOpen ? "translate-x-0" : "translate-x-[100%]"
-        }`}
+        className={`fixed top-5 right-0 z-[9999999999] w-3/4 flex flex-col gap-5 pb-10 rounded-l-2xl bg-[rgba(255,255,255,.05)] backdrop-blur-md border-[2px] border-r-0 border-[#192655] duration-300 ${menuOpen ? "translate-x-0" : "translate-x-[100%]"
+          }`}
       >
         <div className="w-full flex justify-end items-center px-3 h-[72px] border-b-2 border-[#192655]">
           <TfiClose
@@ -134,7 +127,7 @@ export default function Navbar() {
             Home
           </Link>
           <Link
-            href={"/"}
+            href={"/services"}
             className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center"
           >
             Services
@@ -146,13 +139,13 @@ export default function Navbar() {
             Pricing
           </Link>
           <Link
-            href={"/"}
+            href={"/about"}
             className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center"
           >
             About
           </Link>
           <Link
-            href={"/"}
+            href={"/contact"}
             className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center"
           >
             Contact

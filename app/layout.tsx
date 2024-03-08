@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Quicksand } from 'next/font/google'
 import '../styles/globals.css'
 import 'swiper/css';
+import 'aos/dist/aos.css';
 import Preloader from './Preloader'
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import HandleProvider from './HandleProvider';

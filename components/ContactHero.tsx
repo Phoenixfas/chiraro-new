@@ -15,6 +15,7 @@ const ContactHero = () => {
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
     const [sent, setSent] = useState(false);
     const formRef = useRef(null);
 
@@ -45,6 +46,7 @@ const ContactHero = () => {
                 setCategory("");
                 setLoading(false);
                 setSent(true);
+                setSuccess(true);
                 setTimeout(() => {
                     setSent(false);
                 }, 5000);
@@ -64,64 +66,69 @@ const ContactHero = () => {
     return (
         <section
             id="hero"
-            className="w-[calc(100%-200px)] mx-auto pt-[150px] relative z-0"
+            className="px-4 w-full sm:w-[calc(100%-100px)] xl:w-[calc(100%-200px)] mx-auto pt-[150px] relative z-0"
         >
             <div className={`fixed top-[100px] z-10 left-1/2 opacity-0 duration-300 ${sent ? "sent" : "hide"}`}
             >
-                <ContactModal success={true} />
+                <ContactModal success={success} />
             </div>
 
-            <div className="absolute top-[25%] left-[-100px] w-[600px] h-[400px] bg-[#43D0F7] opacity-30 blur-[100px]"></div>
+            <div className="absolute top-[25%] left-[-100px] w-[300px] md:w-[600px] h-[400px] bg-[#43D0F7] opacity-30 blur-[100px]"></div>
 
             <div className="w-full flex flex-col items-center justify-center gap-8">
-                <h1 className="text-[68px] font-[700] w-fit uppercase text-center">
+                <h1 className="text-[40px] sm:text-[45px] px-4 lg:text-[68px] font-[700] w-fit uppercase text-center">
                     Contact <span className="text-[#43D0F7]"> Us</span>
                 </h1>
-                <p className="text-[#e5e5e5] leading-[200%] text-[22px] font-light text-center w-[60%]">
+                <p className="text-[#e5e5e5] leading-[200%] text-[22px] font-light text-center w-[80%] lg:w-[60%]">
                     We are here to help and answer any question, you can request services,
                     ask for a quote, or just say hi.
                 </p>
             </div>
-            <div className="flex justify-start items-start my-32 py-10 relative pl-24 px-12">
+            <div className="flex flex-col lg:flex-row justify-start items-start my-16 lg:my-22 py-10 relative px-4 sm:px-8 md:px-16 gap-10">
                 <div className="rect"></div>
 
-                <div className="flex flex-col items-start justify-start">
+                <div className="flex flex-col items-center w-full lg:items-start justify-start">
                     <h1 className="text-[30px] font-[500] w-fit text-center tracking-widest underl mb-12">
                         Contact <span className="text-[#43D0F7]"> Info</span>
                     </h1>
-                    <div className="flex flex-col gap-8 items-start border-b-[2px] border-b-[#43D0F7] pb-5 mb-5">
-                        <Link
-                            href={"/"}
-                            className="flex justify-center items-center tracking-widest text-[16px] gap-5 duration-500 hover:text-[#43D0F7E0]"
-                        >
-                            <FaPhoneAlt />
-                            +251-991-229893
-                        </Link>
-                        <Link
-                            href={"/"}
-                            className="flex justify-center items-center tracking-widest text-[16px] gap-5 duration-500 hover:text-[#43D0F7E0]"
-                        >
-                            <FaPhoneAlt />
-                            +251-911-229893
-                        </Link>
+                    <div className="flex lg:flex-col md:flex-row flex-col gap-5 md:gap-10 lg:gap-5 mb-10 lg:mb-16">
+                        <div className="flex flex-col gap-8 items-start border-b-[2px] border-b-[#43D0F7] md:border-b-transparent lg:border-b-[#43D0F7] pb-5 justify-start">
+                            <Link
+                                href={"/"}
+                                className="flex justify-center items-center tracking-widest text-[16px] gap-5 duration-500 hover:text-[#43D0F7E0]"
+                            >
+                                <FaPhoneAlt />
+                                +251-991-229893
+                            </Link>
+                            <Link
+                                href={"/"}
+                                className="flex justify-center items-center tracking-widest text-[16px] gap-5 duration-500 hover:text-[#43D0F7E0]"
+                            >
+                                <FaPhoneAlt />
+                                +251-911-229893
+                            </Link>
+                        </div>
+                        <div className="flex flex-col gap-8 items-start ">
+
+                            <Link
+                                href={"/"}
+                                className="flex justify-center items-center tracking-widest text-[16px] gap-5 duration-500 hover:text-[#43D0F7E0]"
+                            >
+                                <FaLocationDot />
+                                Addis Ababa, Ethiopia
+                            </Link>
+                            <Link
+                                href={"/"}
+                                className="flex justify-center items-center tracking-widest text-[16px] gap-5 duration-500 hover:text-[#43D0F7E0]"
+                            >
+                                <MdEmail />
+                                hello@chiraro.com
+                            </Link>
+                        </div>
                     </div>
-                    <div className="flex flex-col gap-8 items-start mb-16">
-                        <Link
-                            href={"/"}
-                            className="flex justify-center items-center tracking-widest text-[16px] gap-5 duration-500 hover:text-[#43D0F7E0]"
-                        >
-                            <FaLocationDot />
-                            Addis Ababa, Ethiopia
-                        </Link>
-                        <Link
-                            href={"/"}
-                            className="flex justify-center items-center tracking-widest text-[16px] gap-5 duration-500 hover:text-[#43D0F7E0]"
-                        >
-                            <MdEmail />
-                            hello@chiraro.com
-                        </Link>
-                    </div>
-                    <div className="flex justify-start gap-12 items-center pr-8">
+
+
+                    <div className="flex justify-center gap-12 items-center pr-0 sm:pr-8 flex-wrap">
                         <Link
                             href={"/"}
                             className="w-12 h-12 rounded-sm p-2 gradient flex justify-center items-center linkSocial shadow-[0px_0px_10px_0px_#43d0f7ba]"
@@ -134,6 +141,8 @@ const ContactHero = () => {
                         >
                             <FaFacebook className="text-white text-[23px]" />
                         </Link>
+
+
                         <Link
                             href={"/"}
                             className="w-12 h-12 rounded-sm p-2 gradient flex justify-center items-center linkSocial shadow-[0px_0px_10px_0px_#43d0f7ba]"
@@ -148,19 +157,19 @@ const ContactHero = () => {
                         </Link>
                     </div>
                 </div>
-                <form ref={formRef} className="flex flex-col gap-5 w-full px-10 py-3">
-                    <div className="flex justify-center items-center gap-6">
+                <form ref={formRef} className="flex flex-col gap-5 w-full py-3">
+                    <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                         <input
                             type="text"
                             placeholder="Full Name"
-                            className="w-1/2 h-12 bg-[#f5f5f5] px-4 rounded-sm text-[#676767] border-[3px] focus:border-[#43D0F7] duration-500 outline-none"
+                            className="w-full sm:w-1/2 h-12 bg-[#f5f5f5] px-4 rounded-sm text-[#676767] border-[3px] focus:border-[#43D0F7] duration-500 outline-none"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                         />
                         <input
                             type="email"
                             placeholder="Email"
-                            className="w-1/2 h-12 bg-[#f5f5f5] px-4 rounded-sm text-[#676767] border-[3px] focus:border-[#43D0F7] duration-500 outline-none"
+                            className="w-full sm:w-1/2 h-12 bg-[#f5f5f5] px-4 rounded-sm text-[#676767] border-[3px] focus:border-[#43D0F7] duration-500 outline-none"
                             onChange={(e) => setEmail(e.target.value)}
                             value={email}
                         />
@@ -172,16 +181,16 @@ const ContactHero = () => {
                         onChange={(e) => setSubject(e.target.value)}
                         value={subject}
                     />
-                    <div className="flex justify-center items-center gap-6">
+                    <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                         <input
                             type="tel"
                             placeholder="Phone Number"
-                            className="w-1/2 h-12 bg-[#f5f5f5] px-4 rounded-sm text-[#676767] border-[3px] focus:border-[#43D0F7] duration-500 outline-none"
+                            className="w-full sm:w-1/2 h-12 bg-[#f5f5f5] px-4 rounded-sm text-[#676767] border-[3px] focus:border-[#43D0F7] duration-500 outline-none"
                             onChange={(e) => setPhone(e.target.value)}
                             value={phone}
                         />
                         {/* category selector */}
-                        <div className="custom-select">
+                        <div className="w-full sm:w-1/2 custom-select">
                             <select className="w-full h-12 bg-[#f5f5f5] px-4 rounded-sm text-[#676767] border-[3px] focus:border-[#43D0F7] duration-500 outline-none className='text-[#9DA4B0]'"
                                 onChange={(e) => setCategory(e.target.value)}
                                 value={category}

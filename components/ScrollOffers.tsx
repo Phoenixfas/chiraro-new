@@ -6,7 +6,7 @@ const ScrollOffers = () => {
     const offsetTop = document.getElementById('services')?.offsetTop
     if (offsetTop) {
       window.scrollTo({
-        top: offsetTop + 100,
+        top: offsetTop + 45,
         behavior: 'smooth'
       })
     }

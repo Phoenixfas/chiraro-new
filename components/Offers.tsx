@@ -1,13 +1,40 @@
-import React from "react";
+"use client"
+import { useScroll, motion } from "framer-motion";
+import React, { useRef } from "react";
 
 const Offers = () => {
+  const ref1 = useRef(null)
+  const ref2 = useRef(null)
+  const ref3 = useRef(null)
+  const { scrollYProgress: scroll1 } = useScroll(
+    {
+      target: ref1,
+      offset: ["0 1", "1.33 1"],
+    },
+  )
+  const { scrollYProgress: scroll2 } = useScroll(
+    {
+      target: ref2,
+      offset: ["0 1", "1.33 1"],
+    },
+  )
+  const { scrollYProgress: scroll3 } = useScroll(
+    {
+      target: ref3,
+      offset: ["0 1", "1.33 1"],
+    },
+  )
+
   return (
     <section
       id="offers"
       className="w-full items-center justify-center flex relative"
     >
       <div className="px-7 sm:px-[100px] lg:px-[200px] w-full md:px-10 pt-10 lg:pt-24 flex flex-col gap-[100px] md:gap-[50px] mb-20 md:mb-0 items-center lg:items-start justify-start">
-        <div className="w-full md:w-[80%] lg:w-[700px] h-fit pl-6 md:pl-[100px] pr-6 md:pr-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative">
+        <motion.div ref={ref1} style={{
+          scale: scroll1,
+          opacity: scroll1,
+        }} className="w-full md:w-[80%] lg:w-[700px] h-fit pl-6 md:pl-[100px] pr-6 md:pr-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative">
           <div className="absolute top-[50%] left-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]">
             {" "}
           </div>
@@ -38,8 +65,11 @@ const Offers = () => {
             </p>
           </div>
 
-        </div>
-        <div className="w-full md:w-[80%] lg:w-[700px] h-fit pl-6 md:pl-[40px] md:pr-[100px] pr-6 py-5 rounded-xl bg-[rgba(47,64,75,1)] relative lg:self-end">
+        </motion.div>
+        <motion.div ref={ref2} style={{
+          scale: scroll2,
+          opacity: scroll2,
+        }} className="w-full md:w-[80%] lg:w-[700px] h-fit pl-6 md:pl-[40px] md:pr-[100px] pr-6 py-5 rounded-xl bg-[rgba(47,64,75,1)] relative lg:self-end">
           <div className="absolute hidden md:block top-[50%] right-0 lg:right-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]">
             {" "}
           </div>
@@ -67,8 +97,11 @@ const Offers = () => {
             </p>
           </div>
 
-        </div>
-        <div className="w-full md:w-[80%] lg:w-[700px] h-fit pl-6 md:pl-[100px] pr-6 md:pr-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative">
+        </motion.div>
+        <motion.div ref={ref3} style={{
+          scale: scroll3,
+          opacity: scroll3,
+        }} className="w-full md:w-[80%] lg:w-[700px] h-fit pl-6 md:pl-[100px] pr-6 md:pr-[40px] py-5 rounded-xl bg-[rgba(47,64,75,1)] relative">
           <div className="absolute top-[50%] left-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]">
             {" "}
           </div>
@@ -99,7 +132,7 @@ const Offers = () => {
             </p>
           </div>
 
-        </div>
+        </motion.div>
       </div>
       <div className="absolute bottom-[150px] left-0 w-full h-[1px] bg-[rgba(238,238,238,0.1)] -z-[1]"></div>
     </section>

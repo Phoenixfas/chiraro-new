@@ -1,13 +1,28 @@
-import Link from "next/link";
-import React from "react";
+"use client"
+
+import { motion, useScroll } from "framer-motion"
+import React, { useRef, useEffect } from "react";
 import Button from "./Button";
+import AOS from 'aos'
+import 'aos/dist/aos.css';
+
 
 const OUrServices = () => {
+  const ref = useRef(null)
+  const { scrollYProgress } = useScroll(
+    {
+      target: ref,
+      offset: ["0 1", "1.33 1"],
+    },
+
+  )
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <section id="services" className="w-full h-full items-center justify-center flex relative pt-10 lg:pt-24">
-      <div className="hidden md:block absolute bottom-[60px] left-0 w-full h-[1px] bg-[rgba(238,238,238,0.1)] z-[1]"></div>
       <div className="px-7 sm:px-[50px] lg:px-[200px] w-full flex flex-col gap-5 mb-20 md:mb-0 items-center justify-center relative ">
-        <div className="absolute top-[50%] left-[-20%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]">
+        <div className="absolute top-[20%] left-[0%] w-[300px] h-[300px] bg-[#43D0F7] opacity-30 blur-[100px]">
           {" "}
         </div>
 
@@ -15,7 +30,8 @@ const OUrServices = () => {
           Our <span className="text-[#43D0F7]">Services</span>
         </h1>
         <div className=" w-full justify-center items-center flex-col ">
-          <div className="w-full flex justify-center md:flex-row flex-col gap-[50px] items-center my-4 md:my-[50px]">
+          <div data-aos="fade-up" data-aos-duration="1000"
+            className="w-full flex justify-center md:flex-row flex-col gap-[50px] items-center my-4 md:my-[50px]">
             <div className="flex justify-start items-center flex-col gap-7 min-w-[30%] text-center">
               <div className="w-[100px] h-[100px] rounded-[20px] bg-[rgba(255,237,237,1)] relative flex items-center justify-center">
                 <svg
@@ -167,10 +183,11 @@ const OUrServices = () => {
               </p>
             </div>
           </div>
-          <div className="w-full mt-[50px] md:mt-[100px]">
+          <div
+            className="w-full mt-[50px] md:mt-[100px]">
             <Button right={false} href={"/services"} name={"More"} />
           </div>
-          <div className="absolute top-[100%] right-[-1%] w-[400px] h-[400px] bg-[#43D0F7] opacity-30 blur-[150px] z-[-1]"></div>
+          <div className="absolute top-[100%] right-0 w-[400px] h-[400px] bg-[#43D0F7] opacity-30 blur-[150px] z-[-1]"></div>
         </div>
       </div>
     </section>

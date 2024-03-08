@@ -7,6 +7,7 @@ import WebGL from 'three/addons/capabilities/WebGL.js';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
+import { motion } from 'framer-motion';
 
 export default function Hero3d() {
     useEffect(() => {
@@ -168,6 +169,8 @@ export default function Hero3d() {
     }, []);
 
     return (
-        <div id='hero-board' className='relative w-full xl:h-full lg:h-[700px] md:h-[600px] h-[400px]'></div>
+        <motion.div initial={{ translateY: "40%", opacity: 0 }}
+            animate={{ translateY: 0, opacity: 1 }}
+            transition={{ delay: 0.5, length: 1 }} id='hero-board' className='relative w-full xl:h-full lg:h-[700px] md:h-[600px] h-[400px]'></motion.div>
     )
 }

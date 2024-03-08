@@ -35,12 +35,12 @@ const RecentClients = () => {
   }, [width, md]);
 
   return (
-    <section className="w-full h-full items-center justify-center flex relative pt-0 lg:pt-[150px]">
+    <section className="w-full h-full items-center justify-center flex relative pt-10 lg:pt-24">
       <div className="px-3 sm:px-[50px] lg:px-[200px] w-full flex flex-col items-center justify-center relative ">
         <h1 className="font-[700] w-fit text-center text-[40px] sm:text-[45px] px-6 lg:text-[60px] mb-10">
           Our Recent<span className="text-[#43D0F7] block sm:inline"> Clients</span>
         </h1>
-        <div className="hidden md:flex justify-start items-center gap-2 lg:gap-5 text-[15px] lg:text-[20px] font-medium  select-none">
+        <div className="hidden md:flex justify-start items-center gap-2 lg:gap-5 text-[15px] lg:text-[20px] font-medium  select-none mb-10">
           <p
             className={`lg:px-[12px] lg:py-[6px] px-[6px] py-[3px] rounded-[24px] cursor-pointer duration-500 ${tabs === "all" ? "bg-[#43D0F7]" : ""
               }`}
@@ -111,7 +111,7 @@ const RecentClients = () => {
           >
             <Link
               href={"https://www.sawlatours.com/"}
-              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[30%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>div]:hover:translate-y-0 overflow-hidden"
+              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[40%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>div]:hover:translate-y-0 overflow-hidden"
             >
               <Image
                 alt="Sawla Tours"
@@ -128,7 +128,7 @@ const RecentClients = () => {
             </Link>
             <Link
               href={"https://www.bluenileexpeditions.com/"}
-              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[30%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
+              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[40%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
             >
               <Image
                 alt="Blue Nile Expedition"
@@ -145,7 +145,7 @@ const RecentClients = () => {
             </Link>
             <Link
               href={"https://www.mettita.com/"}
-              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[30%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
+              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[40%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
             >
               <Image
                 alt="Metti Legal Services"
@@ -162,7 +162,7 @@ const RecentClients = () => {
             </Link>
             <Link
               href={"https://www.bluenileexpeditions.com/"}
-              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[30%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
+              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[40%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
             >
               <Image
                 alt="Sawla Tours"

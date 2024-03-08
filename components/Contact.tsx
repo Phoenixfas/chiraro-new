@@ -14,7 +14,7 @@ const Contact = () => {
             <div className='flex justify-center items-center flex-col'>
                 <Image src='/images/contact.png' alt='Contact Us' width={500} height={500} className='w-[80%] md:w-1/2 xl:w-1/3' />
                 <div className='w-full md:w-[70%]'>
-                    <p className='text-[#e5e5e5] leading-[200%] text-[22px] font-light text-center mb-10'>Contact us today to discuss your project requirements and take the first step to wards achieving your goals!</p>
+                    <p className='text-[#e5e5e5] leading-[200%] text-[22px] font-light text-center mb-10'>Contact us today to discuss your project requirements and take the first step towards achieving your goals!</p>
                     <Button right={false} href={'/contact'} name={'Contact Us'} />
                 </div>
 

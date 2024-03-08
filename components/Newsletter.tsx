@@ -7,10 +7,10 @@ const Newsletter = () => {
       id="offers"
       className="w-full items-center justify-center flex relative"
     >
-      <div className="px-5 sm:px-[50px] lg:px-[200px] pt-[100px] lg:pt-[250px] pl-5 lg:pl-[80px] flex items-center justify-center">
+      <div className="px-4 sm:px-[50px] lg:px-[200px] pt-10 md:pt-[150px] lg:pt-[200px] flex items-center justify-center">
         <div className="w-full px-0 sm:px-12 flex flex-col md:flex-row justify-center items-center rounded-lg relative py-10">
           <div className="rect"></div>
-          <div className="w-full md:w-1/2 p-8 flex flex-col gap-3">
+          <div className="w-full md:w-1/2 px-4 sm:p-8 flex flex-col gap-3">
             <div>
               <h1 className="text-[35px] sm:text-[46px] text-center md:text-start tracking-wide font-semibold leading-[105%]">
                 Subscribe to our{" "}
@@ -23,14 +23,14 @@ const Newsletter = () => {
               <input
                 type="email"
                 placeholder="Your Email"
-                className="p-3 pl-6 rounded-lg mb-4 input duration-500 text-gray-500"
+                className="p-3 pl-6 rounded-sm mb-4 input duration-500 text-gray-500"
               />
               <input
                 type="email"
                 placeholder="What's on your mind"
-                className="p-3 pl-6 rounded-lg mb-4 input duration-500 text-gray-500"
+                className="p-3 pl-6 rounded-sm mb-4 input duration-500 text-gray-500"
               />
-              <button className="p-3 button-bg text-white rounded-lg button overflow-hidden">
+              <button className="p-3 button-bg text-white rounded-sm button overflow-hidden">
                 Subscribe
               </button>
             </form>
