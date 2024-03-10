@@ -123,30 +123,35 @@ export default function Navbar() {
           <Link
             href={"/"}
             className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center"
+            onClick={() => setMenuOpen(false)}
           >
             Home
           </Link>
           <Link
             href={"/services"}
             className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center"
+            onClick={() => setMenuOpen(false)}
           >
             Services
           </Link>
           <Link
             href={"/pricing"}
             className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center"
+            onClick={() => setMenuOpen(false)}
           >
             Pricing
           </Link>
           <Link
             href={"/about"}
             className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center"
+            onClick={() => setMenuOpen(false)}
           >
             About
           </Link>
           <Link
             href={"/contact"}
             className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center"
+            onClick={() => setMenuOpen(false)}
           >
             Contact
           </Link>

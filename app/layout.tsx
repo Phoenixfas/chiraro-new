@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Metadata } from 'next';
 import { Quicksand } from 'next/font/google'
 import '../styles/globals.css'
 import 'swiper/css';
@@ -8,6 +9,28 @@ import HandleProvider from './HandleProvider';
 
 const quicksand = Quicksand({ subsets: ['latin'] })
 
+export const metadata: Metadata = {
+  metadataBase: new URL('https://chiraro.com/'),
+  title: 'Chiraro Digital Solutions',
+  description: 'Chiraro offers cutting-edge digital solutions designed to drive business growth. From web development to digital marketing, our tailored services are crafted to meet your unique needs.',
+  keywords: 'digital solutions, web development, digital marketing, business growth, graphics design, technology services, Chiraro',
+  authors: [{ name: 'Chiraro', url: 'https://chiraro.com/' }],
+  openGraph: {
+    title: 'Chiraro Digital Solutions',
+    description: 'Discover cutting-edge digital solutions with Chiraro. Our comprehensive services from web development to digital marketing are tailored to accelerate your business growth.',
+    url: 'https://chiraro.com/',
+    type: 'website',
+    images: [{ url: 'https://res.cloudinary.com/dywnslulk/image/upload/v1710100710/chiraro/logo/chiraro_blue_m5gcch.png', alt: 'Chiraro' }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Chiraro Digital Solutions',
+    description: 'Explore tailored digital solutions at Chiraro to boost your business growth. From bespoke web development to strategic digital marketing, we\'ve got you covered.',
+    images: 'https://res.cloudinary.com/dywnslulk/image/upload/v1710100710/chiraro/logo/chiraro_blue_m5gcch.png'
+  },
+  icons: [{ url: 'https://res.cloudinary.com/dywnslulk/image/upload/v1710100711/chiraro/logo/nav_logo_a6mdim.svg', rel: 'icon'}]
+}
+
 
 export default function RootLayout({
   children,
@@ -16,24 +39,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <title>Chiraro Digital Solutions</title>
-        <meta name="description" content="Chiraro offers cutting-edge digital solutions designed to drive business growth. From web development to digital marketing, our tailored services are crafted to meet your unique needs." />
-        <meta name="keywords" content="digital solutions, web development, digital marketing, business growth, graphics design, technology services, Chiraro" />
-        <meta name="author" content="Chiraro" />
-        <link rel="canonical" href="https://chiraro.com/" />
-        <meta property="og:title" content="Chiraro Digital Solutions" />
-        <meta property="og:description" content="Discover cutting-edge digital solutions with Chiraro. Our comprehensive services from web development to digital marketing are tailored to accelerate your business growth." />
-        <meta property="og:url" content="https://chiraro.com/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://res.cloudinary.com/dywnslulk/image/upload/v1710100710/chiraro/logo/chiraro_blue_m5gcch.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Chiraro Digital Solutions" />
-        <meta name="twitter:description" content="Explore tailored digital solutions at Chiraro to boost your business growth. From bespoke web development to strategic digital marketing, we've got you covered." />
-        <meta name="twitter:image" content="https://res.cloudinary.com/dywnslulk/image/upload/v1710100710/chiraro/logo/chiraro_blue_m5gcch.png" />
-        <link rel="icon" href="/images/logo/chiraro_blue.png" />
-      </Head>
-      
       <body className={quicksand.className}>
         <Preloader>
           <HandleProvider>

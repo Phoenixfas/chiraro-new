@@ -1,10 +1,13 @@
 'use client'
-import { useAppSelector } from '../../redux/hooks'
+import { useAppSelector, useAppDispatch } from '../../redux/hooks'
+import { toggleModal } from '../../redux/slices/orderModalSlice';
+import { setPackage } from '../../redux/slices/packageSlice';
 import { FaCheckCircle } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import packages from '../../data/packages';
 
 export default function WebCards() {
+    const dispatch = useAppDispatch()
     const wType = useAppSelector((state) => state.wType.value)
     const staticPackages = packages.find((p) => p.name === "web")?.categories.find((c) => c.name === "static")?.packages
     const dynamicPackages = packages.find((p) => p.name === "web")?.categories.find((c) => c.name === "dynamic")?.packages
@@ -22,7 +25,10 @@ export default function WebCards() {
                                     <li key={i} className='flex items-center gap-2'><FaCheckCircle className='min-w-[25px] text-xl'/> {f}</li>
                                 ))}
                             </ul>
-                            <div className="group/btn w-fit px-5 py-2 bg-[#43D0F7] rounded-md flex items-center gap-1 cursor-pointer">choose plan <FaArrowRightLong className='group-hover/btn:translate-x-[5px] duration-300' /></div>
+                            <div className="group/btn w-fit px-5 py-2 bg-[#43D0F7] rounded-md flex items-center gap-1 cursor-pointer" onClick={() => {
+                                dispatch(setPackage(p.name))
+                                dispatch(toggleModal(true))
+                            }}>choose plan <FaArrowRightLong className='group-hover/btn:translate-x-[5px] duration-300' /></div>
                         </div>
                     ))}
                 </div>
@@ -38,7 +44,10 @@ export default function WebCards() {
                                     <li key={i} className='flex items-center gap-2'><FaCheckCircle className='min-w-[25px] text-xl'/> {f}</li>
                                 ))}
                             </ul>
-                            <div className="group/btn w-fit px-5 py-2 bg-[#43D0F7] rounded-md flex items-center gap-1 cursor-pointer">choose plan <FaArrowRightLong className='group-hover/btn:translate-x-[5px] duration-300' /></div>
+                            <div className="group/btn w-fit px-5 py-2 bg-[#43D0F7] rounded-md flex items-center gap-1 cursor-pointer" onClick={() => {
+                                dispatch(setPackage(p.name))
+                                dispatch(toggleModal(true))
+                            }}>choose plan <FaArrowRightLong className='group-hover/btn:translate-x-[5px] duration-300' /></div>
                         </div>
                     ))}
                 </div>
