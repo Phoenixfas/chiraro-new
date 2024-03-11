@@ -5,6 +5,8 @@ import 'swiper/css';
 import Preloader from './Preloader'
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import HandleProvider from './HandleProvider';
+import 'aos/dist/aos.css'
+
 
 const quicksand = Quicksand({ subsets: ['latin'] })
 

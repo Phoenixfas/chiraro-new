@@ -8,7 +8,7 @@ import AOS from 'aos'
 const OUrServices = () => {
 
   useEffect(() => {
-    AOS.refresh()
+    AOS.init()
   }, [])
   return (
     <section id="services" className="w-full h-full items-center justify-center flex relative pt-10 lg:pt-24">
