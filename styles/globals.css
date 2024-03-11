@@ -385,3 +385,22 @@ body {
 .flyIn {
   animation: flyIn 1s;
 }
+
+@keyframes pulse {
+  0% {
+    color: #43d0f7;
+  }
+
+  50% {
+    color: #43d0f7ca;
+
+  }
+
+  100% {
+    color: #43d0f7;
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}

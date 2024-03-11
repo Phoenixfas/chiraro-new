@@ -68,7 +68,7 @@ const ContactHero = () => {
             id="hero"
             className="px-4 w-full sm:w-[calc(100%-100px)] xl:w-[calc(100%-200px)] mx-auto pt-[150px] relative z-0"
         >
-            <div className={`fixed top-[100px] z-10 left-1/2 opacity-0 duration-300 ${sent ? "sent" : "hide"}`}
+            <div className={`px-12 w-full fixed top-[100px] z-10 left-1/2 opacity-0 duration-300 sent flex justify-center ${sent ? "sent" : "hide"}`}
             >
                 <ContactModal success={success} />
             </div>
@@ -84,10 +84,10 @@ const ContactHero = () => {
                     ask for a quote, or just say hi.
                 </p>
             </div>
-            <div className="flex flex-col lg:flex-row justify-start items-start my-16 lg:my-22 py-10 relative px-4 sm:px-8 md:px-16 gap-10">
+            <div className="flex flex-col lg:flex-row justify-start items-center my-16 lg:my-22 py-10 relative px-4 sm:px-8 md:px-16 gap-10">
                 <div className="rect"></div>
 
-                <div className="flex flex-col items-center w-full lg:items-start justify-start">
+                <div className="flex flex-col items-center lg:items-start justify-start md:px-2">
                     <h1 className="text-[30px] font-[500] w-fit text-center tracking-widest underl mb-12">
                         Contact <span className="text-[#43D0F7]"> Info</span>
                     </h1>
@@ -128,7 +128,7 @@ const ContactHero = () => {
                     </div>
 
 
-                    <div className="flex justify-center gap-12 items-center pr-0 sm:pr-8 flex-wrap">
+                    <div className="flex justify-center gap-12 items-center pr-0 sm:pr-8 flex-wrap md:flex-nowrap">
                         <Link
                             href={"/"}
                             className="w-12 h-12 rounded-sm p-2 gradient flex justify-center items-center linkSocial shadow-[0px_0px_10px_0px_#43d0f7ba]"
@@ -157,7 +157,7 @@ const ContactHero = () => {
                         </Link>
                     </div>
                 </div>
-                <form ref={formRef} className="flex flex-col gap-5 w-full py-3">
+                <form ref={formRef} className="flex flex-col gap-5 w-full py-3 md:px-2">
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
                         <input
                             type="text"
@@ -208,7 +208,7 @@ const ContactHero = () => {
                     </div>
                     <textarea
                         placeholder="Message"
-                        className="w-full h-28 bg-[#f5f5f5] py-3 px-4 rounded-sm text-[#676767] border-[3px] focus:border-[#43D0F7] duration-500 outline-none resize-none"
+                        className="w-full h-36 bg-[#f5f5f5] py-3 px-4 rounded-sm text-[#676767] border-[3px] focus:border-[#43D0F7] duration-500 outline-none resize-none"
                         onChange={(e) => setMessage(e.target.value)}
                         value={message}
                     ></textarea>

@@ -4,7 +4,6 @@ import { motion, useScroll } from "framer-motion"
 import React, { useRef, useEffect } from "react";
 import Button from "./Button";
 import AOS from 'aos'
-import 'aos/dist/aos.css';
 
 
 const OUrServices = () => {

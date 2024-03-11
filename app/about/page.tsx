@@ -9,10 +9,9 @@ export default function page() {
   return (
     <div className='w-full flex flex-col items-center'>
       <AboutUs />
-      <Button right={false} href={"/services"} name={"Explore"} />
       <OurMission />
       <OurApproach />
-      <OurTeam />
+      {/* <OurTeam /> */}
     </div>
   )
 }

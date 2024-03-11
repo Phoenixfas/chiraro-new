@@ -2,12 +2,18 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { use } from "react";
+import React from "react";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
 import { TfiClose } from "react-icons/tfi";
-import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin, FaRegUser } from "react-icons/fa";
+import { HiOutlineHome } from "react-icons/hi";
+import { FiHome, FiPhone } from "react-icons/fi";
+import { MdMiscellaneousServices, MdPriceCheck } from "react-icons/md";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { RiTwitterXFill } from "react-icons/ri";
 
 export default function Navbar() {
   const [scrollingUp, setScrollingUp] = useState(true);
@@ -110,71 +116,78 @@ export default function Navbar() {
         </div>
       </div>
       <div
-        className={`fixed top-5 right-0 z-[9999999999] w-3/4 flex flex-col gap-5 pb-10 rounded-l-2xl bg-[rgba(255,255,255,.05)] backdrop-blur-md border-[2px] border-r-0 border-[#192655] duration-300 ${menuOpen ? "translate-x-0" : "translate-x-[100%]"
+        className={`fixed top-5 right-0 z-[9999999999] w-[80%] h-[95vh] flex flex-col justify-center gap-5 rounded-2xl bg-[rgba(255,255,255,.05)] backdrop-blur-md border-[2px] border-r-0 border-[#43d0f7] duration-300 ${menuOpen ? "translate-x-0" : "translate-x-[100%]"
           }`}
       >
-        <div className="w-full flex justify-end items-center px-3 h-[72px] border-b-2 border-[#192655]">
+        <div className="absolute top-0 right-0 items-center py-10 pr-10 h-[72px]">
           <TfiClose
             className="text-white text-3xl"
             onClick={() => setMenuOpen(false)}
           />
         </div>
-        <div className="w-full flex flex-col justify-center items-center px-10 mb-5">
+        <div className="w-full flex flex-col justify-center items-center px-10 mb-5 text-[24px]">
           <Link
             href={"/"}
-            className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center"
+            className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center flex items-center justify-center gap-2 tracking-widest font-medium"
           >
+            {/* <FiHome /> */}
             Home
           </Link>
           <Link
             href={"/services"}
-            className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center"
+            className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center flex items-center justify-center gap-2 tracking-widest font-medium"
           >
+            {/* <MdMiscellaneousServices /> */}
             Services
           </Link>
           <Link
             href={"/pricing"}
-            className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center"
+            className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center flex items-center justify-center gap-2 tracking-widest font-medium"
           >
+            {/* <MdPriceCheck /> */}
             Pricing
           </Link>
           <Link
             href={"/about"}
-            className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center"
+            className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center flex items-center justify-center gap-2 tracking-widest font-medium"
           >
+            {/* <FaRegUser /> */}
+
             About
           </Link>
           <Link
             href={"/contact"}
-            className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center"
+            className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center flex items-center justify-center gap-2 tracking-widest font-medium"
           >
+            {/* <FiPhone /> */}
+
             Contact
           </Link>
         </div>
         <div className="w-full flex flex-wrap items-center justify-center gap-5 text-white text-2xl">
           <Link
-            className="hover:text-[#01BAEF] duration-300"
+            className="text-[35px] pulse duration-300 delay-100"
             href="https://www.instagram.com/"
           >
             <FaInstagram />
           </Link>
           <Link
-            className="hover:text-[#01BAEF] duration-300"
+            className="text-[35px] pulse duration-300 delay-200"
             href="https://www.facebook.com/"
           >
-            <FaFacebook />
+            <FaFacebookF />
           </Link>
           <Link
-            className="hover:text-[#01BAEF] duration-300"
+            className="text-[35px] pulse duration-300 delay-300"
             href="https://twitter.com/"
           >
-            <FaTwitter />
+            <RiTwitterXFill />
           </Link>
           <Link
-            className="hover:text-[#01BAEF] duration-300"
+            className="text-[35px] pulse duration-300 delay-400"
             href="https://www.linkedin.com/"
           >
-            <FaLinkedin />
+            <FaLinkedinIn />
           </Link>
         </div>
       </div>
