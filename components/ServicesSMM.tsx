@@ -21,7 +21,7 @@ const ServicesSMM = () => {
                     <Image src='/images/digitalm.svg' alt='Digital Marketing' width={1000} height={1000} />
                 </div>
             </div>
-            <Button right={false} href={"/contact"} name={"Request Service"} />
+            <Button right={false} href={"/pricing"} name={"Request Service"} />
 
         </section>
     )

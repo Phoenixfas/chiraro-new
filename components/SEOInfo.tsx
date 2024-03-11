@@ -140,7 +140,10 @@ const SEOInfo = () => {
           <p className="text-[#C9C9C9] leading-[200%] text-[18px] font-light">
             We offer professional SEO services that help websites increase their
             organic search score drastically in order to compete for the highest
-            rankings — even when it comes to highly competitive keywords.
+            rankings even when it comes to highly competitive keywords.
+            <br />
+            <br />
+            Partner with us to unlock pre-qualified leads, drive sales, and skyrocket revenue. Your success is our mission. Let&apos;s make your business goals a reality together.
           </p>
           <div className="mt-10 w-full flex justify-start">
             <Button right={true} href={"/services"} name={"See More"} />

@@ -1,22 +1,14 @@
 "use client"
 
-import { motion, useScroll } from "framer-motion"
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import Button from "./Button";
 import AOS from 'aos'
 
 
 const OUrServices = () => {
-  const ref = useRef(null)
-  const { scrollYProgress } = useScroll(
-    {
-      target: ref,
-      offset: ["0 1", "1.33 1"],
-    },
 
-  )
   useEffect(() => {
-    AOS.init()
+    AOS.refresh()
   }, [])
   return (
     <section id="services" className="w-full h-full items-center justify-center flex relative pt-10 lg:pt-24">

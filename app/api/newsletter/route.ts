@@ -1,0 +1,66 @@
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
+
+export async function POST(request: Request) {
+  const body = await request.json();
+  const { email, message } = body;
+  const credentials = {
+    email: "ermiyas.dagnachew@gmail.com",
+    password: "kflnbsyqmdijfinj",
+  };
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: credentials.email,
+      pass: credentials.password,
+    },
+    tls: {
+      rejectUnauthorized: false,
+    },
+  });
+  const mailOptions = {
+    from: credentials.email,
+    name: "Chiraro Digital",
+    to: credentials.email,
+    subject: `Newsletter Subscription from ${email}`,
+    text: ` Email: ${email} \n\n Message: ${message} `,
+  };
+  try {
+    console.log("Sending email...");
+    await transporter.sendMail(mailOptions, function (error: any, info: any) {
+      if (error) {
+        console.log(error);
+        return NextResponse.json(
+          {
+            message: "Something went wrong. Please try again later.",
+          },
+          {
+            status: 400,
+          }
+        );
+      } else {
+        console.log("Email sent: " + info.response);
+      }
+    });
+    return NextResponse.json(
+      {
+        message: "Email sent successfully!",
+      },
+      {
+        status: 200,
+      }
+    );
+  } catch (error) {
+    console.log(error);
+    return NextResponse.json(
+      {
+        message: "Something went wrong. Please try again later.",
+      },
+      {
+        status: 400,
+      }
+    );
+  }
+}

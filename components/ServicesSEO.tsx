@@ -71,7 +71,7 @@ const ServicesSEO = () => {
                 </div>
 
             </div>
-            <Button right={false} href={"/contact"} name={"Request Service"} />
+            <Button right={false} href={"/pricing"} name={"Request Service"} />
 
 
         </section>

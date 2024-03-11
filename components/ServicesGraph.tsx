@@ -5,7 +5,7 @@ import Button from "./Button";
 const ServicesGraph = () => {
   return (
     <section className="flex flex-col pt-10 lg:pt-24 w-full px-0 sm:px-[50px] lg:px-[200px] relative justify-center items-center">
-      <h1 className="text-[40px] sm:text-[45px] px-4 text-center sm:text-[60px] font-[700] w-fit mb-10">
+      <h1 className="text-[40px] sm:text-[45px] px-4 text-center lg:text-[60px] font-[700] w-fit mb-10">
         Graphics <span className="text-[#43D0F7]">Design</span>
       </h1>
       <div className="absolute top-[55%] sm:top-[45%] -z-10 right-0 w-[500px] h-[500px] bg-[#43D0F7] opacity-30 blur-[100px]"></div>
@@ -45,7 +45,7 @@ const ServicesGraph = () => {
           />
         </div>
       </div>
-      <Button right={false} href={"/contact"} name={"Request Service"} />
+      <Button right={false} href={"/pricing#grap"} name={"Request Service"} />
 
     </section>
   );

@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { FaInstagram, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FiHome } from "react-icons/fi";
 import { FaRegUser } from "react-icons/fa6";
 import { MdMiscellaneousServices } from "react-icons/md";
 import { MdPriceCheck } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
+import { RiTwitterXFill } from "react-icons/ri";
 
 export default function Footer() {
   return (
@@ -63,28 +64,31 @@ export default function Footer() {
         </div>
         <div className="flex justify-center items-center gap-7">
           <Link
-            href={"instagram"}
+            href={"https://www.instagram.com/chiraro.digital/"}
             className="flex justify-center items-center p-3 rounded-full text-[30px] bg-slate-700 linkSocial"
           >
             <FaInstagram />
           </Link>
           <Link
-            href={"facebook"}
+            href={"https://www.facebook.com/profile.php?id=61552682280329"}
             className="flex justify-center items-center p-3 rounded-full text-[30px] bg-slate-700 linkSocial"
           >
-            <FaFacebook />
+            <FaFacebookF />
+
           </Link>
           <Link
-            href={"twitter"}
+            href={"https://twitter.com/chiraro_digital"}
             className="flex justify-center items-center p-3 rounded-full text-[30px] bg-slate-700 linkSocial"
           >
-            <FaTwitter />
+            <RiTwitterXFill />
+
           </Link>
           <Link
-            href={"linkedin"}
+            href={"https://twitter.com/chiraro_digital"}
             className="flex justify-center items-center p-3 rounded-full text-[30px] bg-slate-700 linkSocial"
           >
-            <FaLinkedin />
+            <FaLinkedinIn />
+
           </Link>
         </div>
         <div className="text-[12px] sm:text-[19px] text-slate-200 font-mono">

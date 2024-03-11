@@ -167,19 +167,19 @@ export default function Navbar() {
         <div className="w-full flex flex-wrap items-center justify-center gap-5 text-white text-2xl">
           <Link
             className="text-[35px] pulse duration-300 delay-100"
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/chiraro.digital/"
           >
             <FaInstagram />
           </Link>
           <Link
             className="text-[35px] pulse duration-300 delay-200"
-            href="https://www.facebook.com/"
+            href="https://www.facebook.com/profile.php?id=61552682280329"
           >
             <FaFacebookF />
           </Link>
           <Link
             className="text-[35px] pulse duration-300 delay-300"
-            href="https://twitter.com/"
+            href="https://twitter.com/chiraro_digital"
           >
             <RiTwitterXFill />
           </Link>
