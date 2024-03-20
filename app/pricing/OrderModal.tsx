@@ -69,13 +69,12 @@ export default function OrderModal() {
             console.log(e);
         }
     };
-    console.log({ name, email, phone, company, website, package: pkg, description })
 
     return (
         <AnimatePresence>
             {modalToggled &&
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='fixed left-0 top-0 z-[9999999999] w-full min-h-screen bg-[#000000aa] flex items-center justify-center px-7'>
-                    <motion.div initial={{ y: "100%" }} animate={{ y: "0%" }} exit={{ y: "100%" }} transition={{ duration: .3, damping: 8, bounce: .5, type: "spring" }} className="relative flex my-20">
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='fixed left-0 top-0 z-[9999999999] w-full h-screen bg-[#000000aa] flex flex-col items-center justify-center px-7 pt-80 pb-10 sm:py-20 overflow-y-auto'>
+                    <motion.div initial={{ y: "100%" }} animate={{ y: "0%" }} exit={{ y: "100%" }} transition={{ duration: .3, damping: 8, bounce: .5, type: "spring" }} className="relative flex ">
                         <div className={`px-12 w-full fixed -top-[30px] z-10 left-1/2 opacity-0 duration-300 sent flex justify-center ${sent ? "sent" : "hide"}`}
                         >
                             <ContactModal success={success} />
@@ -85,7 +84,7 @@ export default function OrderModal() {
                             <Image src="/images/logo/nav_logo_white.svg" alt="Chiraro" width={200} height={200} />
                         </div>
 
-                        <div className="max-w-[700px] bg-[#222831] rounded-xl md:rounded-l-none overflow-hidden flex flex-col p-8">
+                        <div className="max-w-[700px] h-full overflow-y-auto bg-[#222831] rounded-xl md:rounded-l-none overflow-hidden flex flex-col p-8">
                             <h1 className="text-4xl font-black text-[#43D0F7] mb-10">ORDER NOW</h1>
                             <form onSubmit={handleSubmit} className="flex flex-wrap gap-5">
                                 <input type="text" placeholder="Your Full Name" className="p-3 flex-grow duration-300 rounded-md bg-[#222831] border border-[#43D0F7] focus:border-white text-[#43D0F7] outline-none" onChange={(e) => setName(e.target.value)} value={name} />
@@ -94,7 +93,7 @@ export default function OrderModal() {
                                 <input type="text" placeholder="Your Company Name" className="p-3 flex-grow duration-300 rounded-md bg-[#222831] border border-[#43D0F7] focus:border-white text-[#43D0F7] outline-none" onChange={(e) => setCompany(e.target.value)} value={company} />
                                 <input type="text" placeholder="Your Company Website (if available)" className="p-3 flex-grow duration-300 rounded-md bg-[#222831] border border-[#43D0F7] focus:border-white text-[#43D0F7] outline-none" onChange={(e) => setWebsite(e.target.value)} value={website} />
                                 <input type="text" disabled placeholder={pkg} className="p-3 flex-grow duration-300 rounded-md bg-[#222831] border border-[#43D0F7] focus:border-white text-[#43D0F7] placeholder:text-[#43D0F7] outline-none" value={pkg} />
-                                <textarea placeholder="A brief description of the project you need" className="w-full p-3 duration-300 rounded-md bg-[#222831] border border-[#43D0F7] focus:border-white text-[#43D0F7] outline-none" onChange={(e) => setDescription(e.target.value)} value={description} />
+                                <textarea placeholder="A brief description of the project you need" className="w-full max-h-40 p-3 duration-300 rounded-md bg-[#222831] border border-[#43D0F7] focus:border-white text-[#43D0F7] outline-none" onChange={(e) => setDescription(e.target.value)} value={description} />
                                 <button type='submit' className="w-full p-3 duration-300 rounded-md bg-[#43D0F7] hover:bg-white text-[#222831] font-bold">{loading ? "Ordering..." : sent ? "Order Placed Successfuly" : "Order Service"}</button>
                             </form>
                         </div>
