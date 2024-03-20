@@ -94,35 +94,35 @@ const ContactHero = () => {
                     <div className="flex lg:flex-col md:flex-row flex-col gap-5 md:gap-10 lg:gap-5 mb-10 lg:mb-16">
                         <div className="flex flex-col gap-8 items-start border-b-[2px] border-b-[#43D0F7] md:border-b-transparent lg:border-b-[#43D0F7] pb-5 justify-start">
                             <Link
-                                href={"/"}
+                                href={"tel:+251991229893"}
                                 className="flex justify-center items-center tracking-widest text-[16px] gap-5 duration-500 hover:text-[#43D0F7E0]"
                             >
                                 <FaPhoneAlt />
                                 +251-991-229893
                             </Link>
                             <Link
-                                href={"/"}
+                                href={"tel:+251967825549"}
                                 className="flex justify-center items-center tracking-widest text-[16px] gap-5 duration-500 hover:text-[#43D0F7E0]"
                             >
                                 <FaPhoneAlt />
-                                +251-911-229893
+                                +251-967-825549
                             </Link>
                         </div>
                         <div className="flex flex-col gap-8 items-start ">
 
                             <Link
-                                href={"/"}
+                                href={"https://maps.app.goo.gl/xCKpQ3V8nhHZfUk36"}
                                 className="flex justify-center items-center tracking-widest text-[16px] gap-5 duration-500 hover:text-[#43D0F7E0]"
                             >
                                 <FaLocationDot />
                                 Addis Ababa, Ethiopia
                             </Link>
                             <Link
-                                href={"/"}
+                                href={"mailto:info.chiraro@gmail.com"}
                                 className="flex justify-center items-center tracking-widest text-[16px] gap-5 duration-500 hover:text-[#43D0F7E0]"
                             >
                                 <MdEmail />
-                                hello@chiraro.com
+                                info.chiraro@gmail.com
                             </Link>
                         </div>
                     </div>
@@ -130,13 +130,13 @@ const ContactHero = () => {
 
                     <div className="flex justify-center gap-12 items-center pr-0 sm:pr-8 flex-wrap md:flex-nowrap">
                         <Link
-                            href={"/"}
+                            href={"https://www.instagram.com/chiraro.digital/"}
                             className="w-12 h-12 rounded-sm p-2 gradient flex justify-center items-center linkSocial shadow-[0px_0px_10px_0px_#43d0f7ba]"
                         >
                             <RiInstagramFill className="text-white text-[23px]" />
                         </Link>
                         <Link
-                            href={"/"}
+                            href={"https://www.facebook.com/profile.php?id=61552682280329"}
                             className="w-12 h-12 rounded-sm p-2 gradient flex justify-center items-center linkSocial shadow-[0px_0px_10px_0px_#43d0f7ba]"
                         >
                             <FaFacebook className="text-white text-[23px]" />
@@ -144,7 +144,7 @@ const ContactHero = () => {
 
 
                         <Link
-                            href={"/"}
+                            href={"https://x.com/chiraro_digital"}
                             className="w-12 h-12 rounded-sm p-2 gradient flex justify-center items-center linkSocial shadow-[0px_0px_10px_0px_#43d0f7ba]"
                         >
                             <FaTwitter className="text-white text-[23px]" />
