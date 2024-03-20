@@ -150,7 +150,7 @@ const ContactHero = () => {
                             <FaTwitter className="text-white text-[23px]" />
                         </Link>
                         <Link
-                            href={"/"}
+                            href={"https://www.linkedin.com/company/chiraro-digital-solutions/"}
                             className="w-12 h-12 rounded-sm p-2 gradient flex justify-center items-center linkSocial shadow-[0px_0px_10px_0px_#43d0f7ba]"
                         >
                             <FaLinkedin className="text-white text-[23px]" />

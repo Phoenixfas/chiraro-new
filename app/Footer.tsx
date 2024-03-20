@@ -84,7 +84,7 @@ export default function Footer() {
 
           </Link>
           <Link
-            href={"https://twitter.com/chiraro_digital"}
+            href={"https://www.linkedin.com/company/chiraro-digital-solutions/"}
             className="flex justify-center items-center p-3 rounded-full text-[30px] bg-slate-700 linkSocial"
           >
             <FaLinkedinIn />

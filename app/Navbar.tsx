@@ -185,7 +185,7 @@ export default function Navbar() {
           </Link>
           <Link
             className="text-[35px] pulse duration-300 delay-400"
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/company/chiraro-digital-solutions/"
           >
             <FaLinkedinIn />
           </Link>
