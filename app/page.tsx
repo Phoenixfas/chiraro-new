@@ -7,6 +7,7 @@ import RecentClients from "@/components/RecentClients";
 import Blog from "@/components/Blog";
 import Newsletter from "@/components/Newsletter";
 import WhyChiraro from "@/components/WhyChiraro";
+import Image from "next/image";
 
 export default function Home() {
   return (

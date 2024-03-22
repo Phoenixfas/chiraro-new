@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: 'Explore tailored digital solutions at Chiraro to boost your business growth. From bespoke web development to strategic digital marketing, we\'ve got you covered.',
     images: 'https://res.cloudinary.com/dywnslulk/image/upload/v1710100710/chiraro/logo/chiraro_blue_m5gcch.png'
   },
-  icons: [{ url: 'https://res.cloudinary.com/dywnslulk/image/upload/v1710100711/chiraro/logo/nav_logo_a6mdim.svg', rel: 'icon' }]
+  icons: [{ url: '/favicon.ico', rel: 'icon' }]
 }
 
 
