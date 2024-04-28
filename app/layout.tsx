@@ -11,15 +11,15 @@ import 'aos/dist/aos.css'
 const quicksand = Quicksand({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://chiraro.com/'),
+  metadataBase: new URL('https://www.chiraro.com/'),
   title: 'Chiraro Digital Solutions',
   description: 'Chiraro offers cutting-edge digital solutions designed to drive business growth. From web development to digital marketing, our tailored services are crafted to meet your unique needs.',
   keywords: 'digital solutions, web development, digital marketing, business growth, graphics design, technology services, Chiraro',
-  authors: [{ name: 'Chiraro', url: 'https://chiraro.com/' }],
+  authors: [{ name: 'Chiraro', url: 'https://www.chiraro.com/' }],
   openGraph: {
     title: 'Chiraro Digital Solutions',
     description: 'Discover cutting-edge digital solutions with Chiraro. Our comprehensive services from web development to digital marketing are tailored to accelerate your business growth.',
-    url: 'https://chiraro.com/',
+    url: 'https://www.chiraro.com/',
     type: 'website',
     images: [{ url: 'https://res.cloudinary.com/dywnslulk/image/upload/v1710100710/chiraro/logo/chiraro_blue_m5gcch.png', alt: 'Chiraro' }]
   },
@@ -29,7 +29,10 @@ export const metadata: Metadata = {
     description: 'Explore tailored digital solutions at Chiraro to boost your business growth. From bespoke web development to strategic digital marketing, we\'ve got you covered.',
     images: 'https://res.cloudinary.com/dywnslulk/image/upload/v1710100710/chiraro/logo/chiraro_blue_m5gcch.png'
   },
-  icons: [{ url: '/favicon.ico', rel: 'icon' }]
+  icons: [{ url: '/favicon.ico', rel: 'icon' }],
+  alternates: {
+    canonical: `https://www.chiraro.com/`,
+  },
 }
 
 

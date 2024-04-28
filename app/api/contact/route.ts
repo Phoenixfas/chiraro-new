@@ -5,8 +5,8 @@ export async function POST(request: Request) {
   const body = await request.json();
   const { name, email, subject, category, phone, message } = body;
   const credentials = {
-    email: "ermiyas.dagnachew@gmail.com",
-    password: "kflnbsyqmdijfinj",
+    email: "info.chiraro@gmail.com",
+    password: "tuownogdwkoqqecx",
   };
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",

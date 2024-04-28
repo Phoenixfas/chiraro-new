@@ -13,8 +13,8 @@ export async function POST(request: Request) {
     description,
   } = body;
   const credentials = {
-    email: "ermiyas.dagnachew@gmail.com",
-    password: "kflnbsyqmdijfinj",
+    email: "info.chiraro@gmail.com",
+    password: "tuownogdwkoqqecx",
   };
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
