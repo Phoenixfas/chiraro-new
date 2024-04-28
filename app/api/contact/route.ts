@@ -17,7 +17,6 @@ export async function POST(request: Request) {
       pass: credentials.password,
     },
     tls: {
-      ciphers: "SSLv3",
       rejectUnauthorized: false,
     },
   });
@@ -28,9 +27,15 @@ export async function POST(request: Request) {
     subject: `Contact form from ${name}`,
     text: ` Name: ${name} \n Email: ${email}\n Subject: ${subject} \n Phone: ${phone} \n Category: ${category}\n\n Message: ${message} `,
   };
-  const sendMail = async () => {
-    await transporter.sendMail(mailOptions, function (error: any, info: any) {
-      if (error) {
+
+  try {
+    console.log("Sending email...");
+    const res = await transporter
+      .sendMail(mailOptions)
+      .then((info) => {
+        console.log("Email sent: " + info.response);
+      })
+      .catch((error) => {
         console.log(error);
         return NextResponse.json(
           {
@@ -40,22 +45,25 @@ export async function POST(request: Request) {
             status: 400,
           }
         );
-      } else {
-        console.log("Email sent: " + info.response);
-        return NextResponse.json(
-          {
-            message: "Email sent successfully!",
-          },
-          {
-            status: 200,
-          }
-        );
+      });
+    if (res) {
+      return NextResponse.json(
+        {
+          message: "Email sent successfully!",
+        },
+        {
+          status: 200,
+        }
+      );
+    }
+    return NextResponse.json(
+      {
+        message: "Email sent successfully!",
+      },
+      {
+        status: 200,
       }
-    });
-  };
-  try {
-    console.log("Sending email...");
-    await sendMail();
+    );
   } catch (error) {
     console.log(error);
     return NextResponse.json(
