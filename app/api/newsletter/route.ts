@@ -45,16 +45,14 @@ export async function POST(request: Request) {
           }
         );
       });
-    if (res) {
-      return NextResponse.json(
-        {
-          message: "Email sent successfully!",
-        },
-        {
-          status: 200,
-        }
-      );
-    }
+    return NextResponse.json(
+      {
+        message: "Email sent successfully!",
+      },
+      {
+        status: 200,
+      }
+    );
   } catch (error) {
     console.log(error);
     return NextResponse.json(
