@@ -29,20 +29,22 @@ export async function POST(request: Request) {
   };
   try {
     console.log("Sending email...");
-    await transporter.sendMail(mailOptions, function (error: any, info: any) {
-      if (error) {
-        console.log(error);
-        return NextResponse.json(
-          {
-            message: "Something went wrong. Please try again later.",
-          },
-          {
-            status: 400,
-          }
-        );
-      } else {
-        console.log("Email sent: " + info.response);
-      }
+    await new Promise((resolve, reject) => {
+      transporter.sendMail(mailOptions, function (error: any, info: any) {
+        if (error) {
+          console.log(error);
+          return NextResponse.json(
+            {
+              message: "Something went wrong. Please try again later.",
+            },
+            {
+              status: 400,
+            }
+          );
+        } else {
+          console.log("Email sent: " + info.response);
+        }
+      });
     });
     return NextResponse.json(
       {
