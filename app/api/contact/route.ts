@@ -17,6 +17,7 @@ export async function POST(request: Request) {
       pass: credentials.password,
     },
     tls: {
+      ciphers: "SSLv3",
       rejectUnauthorized: false,
     },
   });
