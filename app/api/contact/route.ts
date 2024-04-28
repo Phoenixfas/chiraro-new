@@ -28,33 +28,34 @@ export async function POST(request: Request) {
     subject: `Contact form from ${name}`,
     text: ` Name: ${name} \n Email: ${email}\n Subject: ${subject} \n Phone: ${phone} \n Category: ${category}\n\n Message: ${message} `,
   };
+  const sendMail = async () => {
+    await transporter.sendMail(mailOptions, function (error: any, info: any) {
+      if (error) {
+        console.log(error);
+        return NextResponse.json(
+          {
+            message: "Something went wrong. Please try again later.",
+          },
+          {
+            status: 400,
+          }
+        );
+      } else {
+        console.log("Email sent: " + info.response);
+        return NextResponse.json(
+          {
+            message: "Email sent successfully!",
+          },
+          {
+            status: 200,
+          }
+        );
+      }
+    });
+  };
   try {
     console.log("Sending email...");
-    await new Promise((resolve, reject) => {
-      transporter.sendMail(mailOptions, function (error: any, info: any) {
-        if (error) {
-          console.log(error);
-          return NextResponse.json(
-            {
-              message: "Something went wrong. Please try again later.",
-            },
-            {
-              status: 400,
-            }
-          );
-        } else {
-          console.log("Email sent: " + info.response);
-        }
-      });
-    });
-    return NextResponse.json(
-      {
-        message: "Email sent successfully!",
-      },
-      {
-        status: 200,
-      }
-    );
+    await sendMail();
   } catch (error) {
     console.log(error);
     return NextResponse.json(
