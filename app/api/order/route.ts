@@ -37,8 +37,12 @@ export async function POST(request: Request) {
   };
   try {
     console.log("Sending email...");
-    await transporter.sendMail(mailOptions, function (error: any, info: any) {
-      if (error) {
+    const res = await transporter
+      .sendMail(mailOptions)
+      .then((info) => {
+        console.log("Email sent: " + info.response);
+      })
+      .catch((error) => {
         console.log(error);
         return NextResponse.json(
           {
@@ -48,18 +52,17 @@ export async function POST(request: Request) {
             status: 400,
           }
         );
-      } else {
-        console.log("Email sent: " + info.response);
-      }
-    });
-    return NextResponse.json(
-      {
-        message: "Email sent successfully!",
-      },
-      {
-        status: 200,
-      }
-    );
+      });
+    if (res) {
+      return NextResponse.json(
+        {
+          message: "Email sent successfully!",
+        },
+        {
+          status: 200,
+        }
+      );
+    }
   } catch (error) {
     console.log(error);
     return NextResponse.json(
