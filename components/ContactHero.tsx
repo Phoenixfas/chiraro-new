@@ -68,9 +68,8 @@ const ContactHero = () => {
             id="hero"
             className="px-4 w-full sm:w-[calc(100%-100px)] xl:w-[calc(100%-200px)] mx-auto pt-[150px] relative z-0"
         >
-            <div className={`px-12 w-full fixed top-[100px] z-10 left-1/2 opacity-0 duration-300 sent flex justify-center ${sent ? "sent" : "hide"}`}
-            >
-                <ContactModal success={success} />
+            <div className={`w-full fixed top-[100px] z-[999999999999999] ${sent ? "sent" : "hide"}`}>
+                <ContactModal success={success} message={"Your message was sent successfuly, we'll reply within 24 hours"}/>
             </div>
 
             <div className="absolute top-[25%] left-[-100px] w-[300px] md:w-[600px] h-[400px] bg-[#43D0F7] opacity-30 blur-[100px]"></div>

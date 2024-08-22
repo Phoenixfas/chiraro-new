@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from "react-icons/md";
+import clients from "@/data/clients";
 
 const RecentClients = () => {
   const [prevTab, setPrevTab] = useState("all");
@@ -109,74 +110,26 @@ const RecentClients = () => {
               transform: `translateX(calc((${(sm || md) ? sm ? "30%" : "50%" : "100%"} ) * ${translate}*-1))`,
             }}
           >
-            <Link
-              href={"https://www.sawlatours.com/"}
-              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[40%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>div]:hover:translate-y-0 overflow-hidden"
-            >
-              <Image
-                alt="Sawla Tours"
-                width={800}
-                height={800}
-                src={"/images/sawla.png"}
-                className="object-cover h-full w-full rounded-xl"
-              />
-              <div className="w-full h-full absolute rounded-[20px] bg-[#43d0f7aa] blur-[17px] z-[-1] top-0 left-0"></div>
+            {clients && clients.reverse().map((cli, index) => (
+              <Link
+                key={index}
+                href={cli.link}
+                className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[40%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>div]:hover:translate-y-0 overflow-hidden"
+              >
+                <Image
+                  alt={cli.name}
+                  width={800}
+                  height={800}
+                  src={cli.image}
+                  className="object-cover h-full w-full rounded-xl"
+                />
+                <div className="w-full h-full absolute rounded-[20px] bg-[#43d0f7aa] blur-[17px] z-[-1] top-0 left-0"></div>
 
-              <div className="absolute bottom-0 left-0 w-full h-[60px] bg-[#43d0f7aa] rounded-b-2xl flex items-center justify-center duration-500 translate-y-16">
-                <p className="text-[25px] font-medium">Sawla Tours</p>
-              </div>
-            </Link>
-            <Link
-              href={"https://www.bluenileexpeditions.com/"}
-              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[40%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
-            >
-              <Image
-                alt="Blue Nile Expedition"
-                width={800}
-                height={800}
-                src={"/images/bluenile.png"}
-                className="object-cover h-full w-full rounded-xl"
-              />
-              <div className="w-full h-full absolute rounded-[20px] bg-[#43d0f7aa] blur-[17px] z-[-1] top-0 left-0"></div>
-
-              <div className="name absolute bottom-0 left-0 w-full h-[60px] bg-[#43d0f7aa] rounded-b-2xl flex items-center justify-center duration-500 translate-y-16">
-                <p className="text-[25px] font-medium">Blue Nile Expedition</p>
-              </div>
-            </Link>
-            <Link
-              href={"https://www.mettita.com/"}
-              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[40%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
-            >
-              <Image
-                alt="Metti Legal Services"
-                width={800}
-                height={800}
-                src={"/images/metti.png"}
-                className="object-cover h-full w-full rounded-xl"
-              />
-              <div className="w-full h-full absolute rounded-[20px] bg-[#43d0f7aa] blur-[17px] z-[-1] top-0 left-0"></div>
-
-              <div className="name absolute bottom-0 left-0 w-full h-[60px] bg-[#43d0f7aa] rounded-b-2xl flex items-center justify-center duration-500 translate-y-16">
-                <p className="text-[25px] font-medium">Min-Tech Ethiopia</p>
-              </div>
-            </Link>
-            <Link
-              href={"https://www.bluenileexpeditions.com/"}
-              className="min-w-full sm:min-w-[90%] lg:min-w-[50%] xl:min-w-[40%] h-[270px] bg-[#393E4680] rounded-2xl p-4 relative [&>.name]:hover:translate-y-0 overflow-hidden"
-            >
-              <Image
-                alt="Sawla Tours"
-                width={800}
-                height={800}
-                src={"/images/sawla.png"}
-                className="object-cover h-full w-full rounded-xl"
-              />
-              <div className="w-full h-full absolute rounded-[20px] bg-[#43d0f7aa] blur-[17px] z-[-1] top-0 left-0"></div>
-
-              <div className="name absolute bottom-0 left-0 w-full h-[60px] bg-[#43d0f7aa] rounded-b-2xl flex items-center justify-center duration-500 translate-y-16">
-                <p className="text-[25px] font-medium">Metti Legal Services</p>
-              </div>
-            </Link>
+                <div className="absolute bottom-0 left-0 w-full h-[60px] bg-[#43d0f7aa] rounded-b-2xl flex items-center justify-center duration-500 translate-y-16">
+                  <p className="text-[25px] font-medium">{cli.name}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
 

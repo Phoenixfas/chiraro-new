@@ -33,7 +33,7 @@ export default function Footer() {
               Services{" "}
             </Link>
           </div>
-          <div className="flex justify-center items-center gap-14">
+          <div className="flex flex-wrap justify-center items-center gap-14">
 
             <Link
               href="/pricing"
@@ -62,7 +62,7 @@ export default function Footer() {
             Contact{" "}
           </Link>
         </div>
-        <div className="flex justify-center items-center gap-7">
+        <div className="flex flex-wrap justify-center items-center gap-7">
           <Link
             href={"https://www.instagram.com/chiraro.digital/"}
             className="flex justify-center items-center p-3 rounded-full text-[30px] bg-slate-700 linkSocial"

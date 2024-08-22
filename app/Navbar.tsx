@@ -99,6 +99,13 @@ export default function Navbar() {
               About
             </Link>
             <Link
+              href={"/jobs"}
+              className={`${checkCurrentPage("/jobs") ? "text-[#57D4F5]" : ""
+                } link`}
+            >
+              Jobs
+            </Link>
+            <Link
               href={"/contact"}
               className={`${checkCurrentPage("/contact") ? "text-[#57D4F5]" : ""
                 } link`}
@@ -129,6 +136,7 @@ export default function Navbar() {
           <Link
             href={"/"}
             className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center flex items-center justify-center gap-2 tracking-widest font-medium"
+            onClick={() => setMenuOpen(false)}
           >
             {/* <FiHome /> */}
             Home
@@ -136,6 +144,7 @@ export default function Navbar() {
           <Link
             href={"/services"}
             className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center flex items-center justify-center gap-2 tracking-widest font-medium"
+            onClick={() => setMenuOpen(false)}
           >
             {/* <MdMiscellaneousServices /> */}
             Services
@@ -143,6 +152,7 @@ export default function Navbar() {
           <Link
             href={"/pricing"}
             className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center flex items-center justify-center gap-2 tracking-widest font-medium"
+            onClick={() => setMenuOpen(false)}
           >
             {/* <MdPriceCheck /> */}
             Pricing
@@ -150,14 +160,25 @@ export default function Navbar() {
           <Link
             href={"/about"}
             className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center flex items-center justify-center gap-2 tracking-widest font-medium"
+            onClick={() => setMenuOpen(false)}
           >
             {/* <FaRegUser /> */}
 
             About
           </Link>
           <Link
+            href={"/jobs"}
+            className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center flex items-center justify-center gap-2 tracking-widest font-medium"
+            onClick={() => setMenuOpen(false)}
+          >
+            {/* <FaRegUser /> */}
+
+            Jobs
+          </Link>
+          <Link
             href={"/contact"}
             className="hover:bg-[#01BAEF] rounded-lg duration-300 py-3 hover:border-b-[1px] border-white w-full text-center flex items-center justify-center gap-2 tracking-widest font-medium"
+            onClick={() => setMenuOpen(false)}
           >
             {/* <FiPhone /> */}
 
