@@ -3,17 +3,18 @@ import { NextResponse } from "next/server";
 import Jobapp from "@/models/Jobapp";
 
 export async function GET(request: Request) {
-    try {
-        const jobapps = await Jobapp.find();
-        jobapps.reverse();
+    // try {
+    //     const jobapps = await Jobapp.find();
+    //     jobapps.reverse();
     
-        return NextResponse.json(jobapps, { status: 200 });
-    } catch (e: any) {
-        return NextResponse.json(
-        { message: `Internal Server Error ${e.message}` },
-        { status: 500 }
-        );
-    }
+    //     return NextResponse.json(jobapps, { status: 200 });
+    // } catch (e: any) {
+    //     return NextResponse.json(
+    //     { message: `Internal Server Error ${e.message}` },
+    //     { status: 500 }
+    //     );
+    // }
+    return NextResponse.json({ message: "GET request not allowed" }, { status: 405 });
 };
 
 export async function POST(request: Request) {
