@@ -63,7 +63,7 @@ const jobSchema = new Schema({
   }
 });
 
-let Job;
+let Job: any;
 if (mongoose.models.Job) {
   Job = mongoose.model('Job');
 } else {
