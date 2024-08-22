@@ -5,11 +5,15 @@ import JobDetails from './JobDetails'
 import AppModal from './AppModal'
 
 export default function page() {
-    const { id } = useParams()
   return (
     <div className='relative w-full min-h-screen flex flex-col items-center pt-40'>
-        <JobDetails id={id} />
+        <JobD />
         <AppModal />
     </div>
   )
+}
+
+const JobD = () => {
+    const { id } = useParams()
+    return <JobDetails id={id} />
 }
