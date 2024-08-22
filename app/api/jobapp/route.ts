@@ -1,6 +1,7 @@
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import Jobapp from "@/models/Jobapp";
+import dbConnect from "@/utils/dbConnect";
 
 export async function GET(request: Request) {
     // try {
@@ -18,6 +19,10 @@ export async function GET(request: Request) {
 };
 
 export async function POST(request: Request) {
+    const connected = await dbConnect();
+    if (!connected) {
+        return NextResponse.json({ message: "Error connecting to database" }, { status: 500 });
+    }
     try {
         const {
             jobInfo,
