@@ -75,9 +75,8 @@ export default function OrderModal() {
             {modalToggled &&
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='fixed left-0 top-0 z-[9999999999] w-full h-screen bg-[#000000aa] flex flex-col items-center justify-center px-7 pt-80 pb-10 sm:py-20 overflow-y-auto'>
                     <motion.div initial={{ y: "100%" }} animate={{ y: "0%" }} exit={{ y: "100%" }} transition={{ duration: .3, damping: 8, bounce: .5, type: "spring" }} className="relative flex ">
-                        <div className={`px-12 w-full fixed -top-[30px] z-10 left-1/2 opacity-0 duration-300 sent flex justify-center ${sent ? "sent" : "hide"}`}
-                        >
-                            <ContactModal success={success} />
+                        <div className={`w-full fixed top-[100px] z-[999999999999999] ${sent ? "sent" : "hide"}`} >
+                            <ContactModal success={success} message="Your message was sent successfuly, we'll reply within 24 hours" />
                         </div>
                         <div className="z-[100] absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 rounded-full p-3 bg-[#43D0F7] cursor-pointer" onClick={() => dispatch(toggleModal(false))}><IoClose size={30} /></div>
                         <div className="hidden min-w-[300px] bg-[radial-gradient(#43D0F7,#222831)] rounded-l-xl overflow-hidden md:flex items-center justify-center">
