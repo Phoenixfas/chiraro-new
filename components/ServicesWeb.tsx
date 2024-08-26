@@ -36,13 +36,13 @@ const ServicesWeb = () => {
       >
         <div className="min-w-full flex justify-center items-center gap-10 flex-col">
           <p className="text-[#e5e5e5] leading-[200%] text-[22px] font-light text-center">A static website or business portfolio boosts a business by showcasing its services and products online. It helps attract potential customers, builds credibility, and expands market reach. <br /> <br />With easy access to information, it increases visibility, enabling businesses to grow their clientele and enhance their reputation in a cost-effective manner.</p>
-          <Image src={"/images/clients/bluenile.png"} alt="Static Websites" className="w-full md:w-[70%] rounded-2xl" width={1000} height={1000} />
+          <Image src={"/images/clients/bluenile_web.png"} alt="Static Websites" className="w-full md:w-[70%] rounded-2xl" width={1000} height={1000} />
           <Button right={false} href={"/pricing#web"} name={"Request Service"} />
         </div>
         <div className="min-w-full flex justify-center items-center gap-10 flex-col">
           <p className="text-[#e5e5e5] leading-[200%] text-[22px] font-light text-center">
             A dynamic website brings businesses to life online, engaging visitors with interactive features like forms, galleries, and real-time updates. <br /> <br />It fosters stronger customer relationships, drives traffic through personalized content, and adapts to evolving needs. This dynamic approach maximizes engagement, conversion rates, and overall business success.</p>
-          <Image src={"/images/clients/sawla.png"} alt="Static Websites" className="w-full md:w-[70%] rounded-2xl" width={1000} height={1000} />
+          <Image src={"/images/clients/sawla_web.png"} alt="Static Websites" className="w-full md:w-[70%] rounded-2xl" width={1000} height={1000} />
           <Button right={false} href={"/pricing#web"} name={"Request Service"} />
         </div>
       </div>
